@@ -1,0 +1,11 @@
+*.out
+*.bcf
+*.dvi
+*.lof
+*.log
+*.aux
+*.lot
+*.out.ps
+*.run.xml
+*.gz
+*.toc

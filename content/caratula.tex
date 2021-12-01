@@ -1,0 +1,117 @@
+%\documentclass{letter}
+%\usepackage{graphicx}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% I N S E R T A R    DESDE AQUI %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newdimen\MSup
+\newdimen\MIzq
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  QUIZAS REQUIERAS AJUSTAR ESTOS VALORES %%% 
+\MSup=9pt   
+\MIzq=100pt  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newenvironment{changemargin}[1]{%
+\begin{list}{}{%
+\setlength{\leftmargin}{#1}%
+\setlength{\topmargin}{-100pt}
+\setlength{\parsep}{\parskip}%
+}\item[]
+}{\end{list}}
+
+\addtolength{\topmargin}{-\MSup}
+
+\begin{changemargin}{-\MIzq}
+\thispagestyle{empty}
+\begin{minipage}[c][1pt][t]{0.2\paperwidth}
+\begin{center}
+
+\includegraphics [width=100 pt ]{esc}\\
+\vskip 20pt
+\hskip -10pt
+\linethickness{1.6pt} 
+\line(0,1){520}
+\linethickness{0.9pt} 
+\line(0,1){500}
+\linethickness{1.6pt} 
+\line(0,1){520}
+\end{center}
+\end{minipage}
+\hskip 20 pt
+\begin{minipage}[c][1pt][t]{0.6\paperwidth}
+\begin{center}
+\vskip 30pt
+{\LARGE \scshape Universidad Veracruzana}
+\linethickness{1.6pt} 
+\line(1,0){350}\\
+\linethickness{.9pt} 
+\line(1,0){313}
+\vskip 10pt
+
+
+{\Large \scshape Facultad de F\'isica e Inteligencia Artificial}
+
+
+\vskip 60pt
+
+
+{\LARGE \textbf{ Aqu\'i va el t\'itulo del trabajo, hay t\'itulos que tienen m\'as de un rengl\'on a veces dos e incluso tres renglones
+}}\\
+
+\vskip 70pt
+
+{\Large Trabajo recepcional en la modalidad de:}\\
+
+\vskip 12pt
+
+\textbf{\LARGE TESIS,TESINA,MONOGRAF\'IA,ETC}
+
+
+\vskip 12 pt
+{\Large que como requisito pacial para obtener el t\'itulo de:}
+\vskip 12pt
+
+\textbf{\LARGE Licenciado(a) en F\'isica}
+\end{center}
+
+\vskip 12pt
+
+\begin{center}
+{\Large {P\ R\ E\ S\ E\ N\ T\ A} }
+\end{center}
+
+\vskip 12pt
+
+\begin{center}
+\textbf{\LARGE  NOMBRE DEL ALUMNO}
+\end{center}
+
+\vskip 70pt
+
+\begin{center}
+{\large ASESOR(ES):}\\
+\vskip 20 pt
+
+{\large NOMBRE DEL ASESOR O ASESORES }\\
+\vskip 75 pt
+
+
+Xalapa Enr\'iquez, Veracruz\hfill Mes  a\~no
+
+
+\end{center}
+\end{minipage}
+\end{changemargin}
+
+\newpage
+
+\addtolength{\topmargin}{\MSup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% HASTA AQUI                     %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
