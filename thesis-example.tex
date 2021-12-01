@@ -56,7 +56,7 @@
 \usepackage{physics}
 \usepackage{parskip}
 \usepackage[utf8]{inputenc}		% defines file's character encoding
-\usepackage[spanish,english]{babel} % babel system, adjust the language of the content
+\usepackage[spanish]{babel} % babel system, adjust the language of the content
 \usepackage[spanish,onelanguage,linesnumbered,ruled,vlined]{algorithm2e}
 \usepackage[					% clean thesis style
 	figuresep=colon,%
@@ -97,8 +97,8 @@
 % --------------------------
 %\renewcaptionname{ngerman}{\figurename}{Abb.}
 %\renewcaptionname{ngerman}{\tablename}{Tab.}
-\renewcaptionname{english}{\figurename}{Fig.}
-\renewcaptionname{english}{\tablename}{Tab.}
+\renewcaptionname{spanish}{\figurename}{Fig.}
+\renewcaptionname{spanish}{\tablename}{Tab.}
 
 % --------------------------
 % Front matter
@@ -107,11 +107,11 @@
 \pagestyle{empty}				% no header or footers
 \input{content/caratula}
 \input{content/titlepages}		% INCLUDE: all titlepages
-\cleardoublepage
+%\cleardoublepage
 
 \pagestyle{plain}				% display just page numbers
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
-\cleardoublepage
+%\cleardoublepage
 %
 \input{content/acknowledgement} % INCLUDE: acknowledgement
 \cleardoublepage
@@ -127,7 +127,7 @@
 \setcounter{page}{1}			% set page counter
 \pagestyle{maincontentstyle} 	% fancy header and footer
 %[][]
-\setlength{\parindent}{120px}
+\setlength{\parindent}{12px}
 \input{content/chapter-introduction} % INCLUDE: introduction
 \input{content/chapter-related-work} % INCLUDE: related work
 \input{content/chapter-system}	% INCLUDE: system
