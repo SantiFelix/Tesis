@@ -18,6 +18,29 @@
 
 
 % **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage{graphicx}
+\graphicspath{{gfx/}}
+\usepackage{stmaryrd,amssymb,amsmath}
+\usepackage{physics}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}		% defines file's character encoding
+\usepackage[spanish]{babel} % babel system, adjust the language of the content
+\usepackage[spanish,onelanguage,linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage[					% clean thesis style
+figuresep=colon,%
+sansserif=false,%
+hangfigurecaption=false,%
+hangsection=true,%
+hangsubsection=true,%
+colorize=full,%
+colortheme=bluemagenta,%
+bibsys=bibtex,%
+bibfile=bib-refs,%
+bibstyle=alphabetic,%
+]{cleanthesis}
+% **************************************************
 % Debug LaTeX Information
 % **************************************************
 %\listfiles
@@ -25,7 +48,7 @@
 % **************************************************
 % Information and Commands for Reuse
 % **************************************************
-\newcommand{\thesisTitle}{Filtro de entropía aplicado a series de tiempo de mercados financieros}
+\newcommand{\thesisTitle}{Filtro de entrop\'ia aplicado a series de tiempo de mercados financieros}
 \newcommand{\thesisName}{Versión a corrección}
 \newcommand{\thesisSubject}{Tesis}
 \newcommand{\thesisDate}{12 de abril de 2020}
@@ -39,7 +62,7 @@
 %\newcommand{\thesisSecondReviewerUniversity}{\protect{Universidad Veracruzana}}
 %\newcommand{\thesisSecondReviewerDepartment}{Facultad no-Veracruzana}
 
-\newcommand{\thesisFirstSupervisor}{Dr. Raúl Alejandro Hernández Montoya}
+\newcommand{\thesisFirstSupervisor}{Dr. Ra\'ul Alejandro Hernández Montoya}
 %\newcommand{\thesisSecondSupervisor}{Dr. Otro}
 
 \newcommand{\thesisUniversity}{\protect{Universidad Veracruzana}}
@@ -48,29 +71,6 @@
 \newcommand{\thesisUniversityStreetAddress}{Gonzalo Aguirre Beltrán, Isleta}
 \newcommand{\thesisUniversityPostalCode}{91060}
 
-% **************************************************
-% Load and Configure Packages
-% **************************************************
-\usepackage{graphicx}
-\graphicspath{{gfx/}}
-\usepackage{stmaryrd,amssymb,amsmath}
-\usepackage{physics}
-\usepackage{parskip}
-\usepackage[utf8]{inputenc}		% defines file's character encoding
-\usepackage[spanish]{babel} % babel system, adjust the language of the content
-\usepackage[spanish,onelanguage,linesnumbered,ruled,vlined]{algorithm2e}
-\usepackage[					% clean thesis style
-	figuresep=colon,%
-	sansserif=false,%
-	hangfigurecaption=false,%
-	hangsection=true,%
-	hangsubsection=true,%
-	colorize=full,%
-	colortheme=bluemagenta,%
-	bibsys=bibtex,%
-	bibfile=bib-refs,%
-	bibstyle=alphabetic,%
-]{cleanthesis}
 
 \hypersetup{					% setup the hyperref-package options
 	pdftitle={\thesisTitle},	% 	- title (PDF meta)
@@ -115,7 +115,7 @@
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
 %\cleardoublepage
 %
-\input{content/acknowledgement} % INCLUDE: acknowledgement
+\input{content/motivacion} % INCLUDE: acknowledgement
 \cleardoublepage
 %
 \setcounter{tocdepth}{2}		% define depth of toc
@@ -131,9 +131,9 @@
 %[][]
 \setlength{\parindent}{12px}
 \input{content/chapter-introduction} % INCLUDE: introduction
-\input{content/chapter-related-work} % INCLUDE: related work
-\input{content/chapter-system}	% INCLUDE: system
-\input{content/chapter-concepts} % INCLUDE: concepts
+\input{content/contexto_teorico} % contexto teorico
+\input{content/metodologia}	% INCLUDE: system
+\input{content/glosario} % INCLUDE: concepts
 \input{content/chapter-conclusion} % INCLUDE: conclusion
 \cleardoublepage
 
