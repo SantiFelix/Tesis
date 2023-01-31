@@ -71,7 +71,8 @@ bibstyle=alphabetic,%
 \newcommand{\thesisUniversityStreetAddress}{Gonzalo Aguirre Beltrán, Isleta}
 \newcommand{\thesisUniversityPostalCode}{91060}
 
-tup the hyperref-package options
+
+\hypersetup{					% setup the hyperref-package options
 	pdftitle={\thesisTitle},	% 	- title (PDF meta)
 	pdfsubject={\thesisSubject},% 	- subject (PDF meta)
 	pdfauthor={\thesisName},	% 	- author (PDF meta)
@@ -114,7 +115,7 @@ tup the hyperref-package options
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
 %\cleardoublepage
 %
-\input{content/motivacionknowledgement
+\input{content/motivacion} % INCLUDE: acknowledgement
 \cleardoublepage
 %
 \setcounter{tocdepth}{2}		% define depth of toc
@@ -130,8 +131,9 @@ tup the hyperref-package options
 %[][]
 \setlength{\parindent}{12px}
 \input{content/chapter-introduction} % INCLUDE: introduction
-\input{content/contexto_teorico} % contexto teoricoem
-\input{content/glosario}
+\input{content/contexto_teorico} % contexto teorico
+\input{content/metodologia}	% INCLUDE: system
+\input{content/glosario} % INCLUDE: concepts
 \input{content/chapter-conclusion} % INCLUDE: conclusion
 \cleardoublepage
 
