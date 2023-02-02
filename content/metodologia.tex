@@ -7,9 +7,9 @@ Descripcion de metodo aplicado para entropia  ver diagrama \ref{diagramaentropia
 
 Para comenzar, los datos se han obtenido a través del portal Yahoo Finance, por lo que son registros del precio de cierre de cada dia, además dichos datos fueron depurados y ordenados ya que había algunos espacios en blanco en el archivo original, entonces el software con que se trabaja interpreta los datos sin errores. 
 
-Luego que se han cargado los datos, y se han ordenado es necesario calcular los retornos de los precios. La razón por la que se trabajan los retornos de los precios y no se trabaja directamente con los precios ya que no poseen estacionaridad en el tiempo y ello conlleva a que no va a haber una media central en los datos. Los retornos permiten que los datos se encuentren entorno a una media.
+Luego que se han cargado los datos, y se han ordenado es necesario calcular los retornos de los precios. La razón por la que se trabajan los retornos de los precios y no se trabaja directamente con los precios ya que no poseen estacionaridad en el tiempo y ello conlleva a que no va a haber una media central en los datos. Los retornos permiten analizar fácilmente la tasa de cambio en el tiempo. 
 
-Aunque los retornos son una mejor representación de los precios, aún presentan picos que sobresalen de la media, por lo que se estandarizan los retornos, la estandarización permitirá destacar aquellos retornos que realmente poseen picos en su valor de retorno. 
+Aunque los retornos son una mejor representación de los precios, aún presentan picos que sobresalen de la media. La estandarización permite destacar los retornos que realmente son relevantes. 
 
 Ya que cada retorno ha sido estandarizado con su respectiva fecha,  se procede a discretizar los retornos mediante un proceso que divide en cuatro intervalos a los retornos. Determinar los cuartiles de los retornos y discretizarlos con base en la etiqueta que se pone a cada intervalo, en otras palabras, los intervalos van a permitir etiquetar del 1 al 4 a cada retorno. 
 
@@ -23,9 +23,9 @@ El resultado de la entropia es dado en valores y fechas para cada subconjunto de
 	\label{diagramaentropia1}
 \end{figure}
 
+\subsection{Entropía utlizando medias moviles}
 
-Descripcion de metodo aplicado para entropia utlizando medias moviles ver Figura \ref{entropiamav} . 
-Se aplica el mismo metodo mencionado arriba, adicionalmente en la etapa en que se estandarizan los retornos de los precios con su respectiva fecha. La ventana puede ser elegida por el usuario. Se aplica una entrada de por lo menos 50 días ya que un número menor no suavizaría la curva de manera que no se podría apreciar tendencias en el comportamiento de la curva.
+Se aplica el mismo metodo mencionado arriba, adicionalmente en la etapa en que se estandarizan los retornos de los precios con su respectiva fecha ( ver Figura \ref{entropiamav}). La ventana puede ser elegida por el usuario. Se aplica una entrada de por lo menos 50 días ya que un número menor no suavizaría la curva de manera que no se podría apreciar tendencias en el comportamiento de la curva.
 
 
 
