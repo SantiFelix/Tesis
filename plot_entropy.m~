@@ -37,9 +37,12 @@ dataMAVs=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/dataMAV
 
 RetornoMAV=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/retornoConMAVr.csv');
 retorno=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/retornoSinMAVr.csv');
+retorno=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/retornos.csv');
+retornoestandarizado=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/retornoEstandarizado.csv');
 
 [RetornoMAV]=read_plot_data(RetornoMAV);
 [retorno]=read_plot_data(retorno);
+[retornoestandarizado]=read_plot_data(retornoestandarizado);
 
 precios=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/precios.csv');
 [precios]=read_plot_data(precios);
@@ -54,18 +57,18 @@ ret1dated=[ret1(:),precios(1:end-1,2)];
 
 title=' ';
 figure
-figure_entropy(title, ret1dated, ret1dated,rgb,1)
+figure_entropy(title, ret1dated, retorno,rgb,1)
 
 
 %% Calculate moving mean 
 
 k=50;
-MAVprice = movmean(str2double(precios(:,1)),k);
+MAVprice = movmean(str2double(precios(:,1)),[0,k-1]);
 
-retMAV=MAVprice(2:end) ./ MAVprice(1:end-1) -1;
+retMAV=(MAVprice(2:end) ./ MAVprice(1:end-1) -1);
 
 MAVpricedated=[MAVprice(:),precios(:,2)];
-retMAVdated=[retMAV(:),precios(1:end-1,2)];
+retMAVdated=[retMAV(1:end-50),precios(1:end-51,2)];
 
 figure
 figure_entropy(title, retMAVdated, RetornoMAV,rgb,1)
@@ -73,24 +76,22 @@ figure_entropy(title, retMAVdated, RetornoMAV,rgb,1)
 
 N=0;
 
-%% Calculate quartile
+%% Calculate quartile and entropy
 
-Q = quantile(ret1,3);
-
-Y = discretize(ret1,[-inf,Q,inf]);
 window=50;
-tt=zeros(1,length(Y));
-for i=1:length(Y)-window
-    
-B=zeros(window,1);
-n=50; %Shift units
-B(1:end)=Y(1+i:n+i);
-P1=sum(B==1)/window;
-P2=sum(B==2)/window;
-P3=sum(B==3)/window;
-P4=sum(B==4)/window;
-tt(i)=
-end
+q=0.05;
+
+entropyMAV=calc_entropy(window,retMAV);
+entropy=calc_entropy(window,ret1);
+min_entropyMAV=zeros(size(entropy));
+min_entropyMAV(entropyMAV<quantile(entropyMAV, q))=1;
+
+min_entropy=zeros(size(entropyMAV));
+min_entropy(entropy<quantile(entropy, q))=1;
+
+similarity=sum(diag(dist(min_entropy',min_entropyMAV)));
+similarity2=sum(abs(min_entropy-min_entropyMAV));
+
 %%%%%%
 %% plot entropy for DJJA data into matlab
 %%%%%%
@@ -115,7 +116,7 @@ subMDataReal=MDataReal(datetime(MDataReal(:,2))> datetime('01-Jan-2002') & datet
 subMDataMAVReal=MDataMAVReal(datetime(MDataMAVReal(:,2))> datetime('01-Jan-2002') & datetime(MDataMAVReal(:,2))< datetime('01-Jan-2004'),:);
 subprecios=precios(datetime(precios(:,2))> datetime('01-Jan-2002') & datetime(precios(:,2))< datetime('01-Jan-2004'),:);
 MAVprice=MAVprice(datetime(MAVprice(:,2))> datetime('01-Jan-2002') & datetime(MAVprice(:,2))< datetime('01-Jan-2004'),:);
-
+N=0
 N=N+1;
 title='Entropia real y entropia MAV DJJA';
 figure(N)
