@@ -60,10 +60,11 @@ Reglas de cuartiles
 \begin{center}
 	\begin{tabular}{ |r | l | c| }
 		 \hline
-		Cuartil & Regla & etiqueta \\
-		primer cuartil & $\inf > 0$ & 1 \\
-		2 &   & Calculo de madia moviles utilizando N dias\\ 
-		3 &     &Estimacion gaussiana con sigma igual 3 \\
+		Cuartiles & Regla & Valor de retorno discretizado \\ \hline
+		Primer cuartil & $(-\infty , Q_2)$ & 1 \\
+		Segundo cuartil & $[Q_2 , Q_3)$   & 2\\ 
+		Tercer cuartil &  $[Q_3 , Q_4)$   & 3 \\
+		Cuarto cuartil & $[Q_4 , \infty)$ &4\\ 
 		 \hline
 	\end{tabular}
 \end{center}
@@ -71,3 +72,19 @@ Reglas de cuartiles
 
 
 Finalmente, se aplica una prueba estadística de distribuciones a los valores con mínima entropía, tanto de aquellos que fueron tratados con un filtro de media movil como aquellos que no. 
+
+
+\textbf{¿Por qué se utiliza la función Quantile para obtener el intervalo de confianza?}
+
+
+
+Recordemos que de la ecuación de la entropía de Shannon, se realiza la suma de la probabilidad del estado, multiplicado por la probabilidad del estado. Gracias a que se trabajan con probabilidades es posible graficar un histograma de las entropías, y además se puede estudiar la entropía mediante cuantiles de manera análoga con los retornos de los precios.
+
+Calcular el intervalo de confianza para la distribución de estas entropías sale de este trabajo de tesis, ya que no se asemeja ni a una distribución normal ni a una distribución de Student, ello implicaría tener que realizar interpolaciones entre los cuantiles obtenidos tal como se muestra en el articulo A Method for Confidence Intervals of High Quantiles de Mei Ling Huang, y Xiang Raney-Yan publicado en 2021. 
+%file:///D:/dark_/descarga_chrome/entropy-23-00070-v3.pdf
+
+Por lo anterior, se propone utilizar como umbral para hallar los valores mínimos de entropía el valor del percentil 95 en vez de un íntervalo de confianza. Entre el año 2000 y 2005, se aprecia un valor mínimo en el precio, mismo que tiene impacto al estudiar la entropía.
+
+
+Entonces, al realizar un gráfico que muestra la distribución de la entropía, y dado que la entropía es obtenida a partir de probabilidades, es fácil obtener cualquier cuantil (percentil 95 en el caso del intervalo de confianza), además que dicho percentil permite diferenciar aquellos valores de la entropía que son ruido de aquellos que no. 
+
