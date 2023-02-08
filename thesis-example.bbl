@@ -1,0 +1,27 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Cottrell {et~al.}(2009)Cottrell, Cockshott, Michaelson, Wright, \&
+  Yakovenko}]{cottrell_classical_2009}
+Cottrell, A., Cockshott, P., Michaelson, G., Wright, I., \& Yakovenko, V. 2009,
+  Classical {Econophysics}, Routledge {Advances} in {Experimental} and
+  {Computable} {Economics} (Taylor \& Francis)
+
+\bibitem[{Hernández-Montoya {et~al.}(2022)Hernández-Montoya,
+  Rodríguez-Martínez, Rodríguez-Achach, \&
+  Hernández-Enríquez}]{hernandez-montoya_entropy_2022}
+Hernández-Montoya, A.~R., Rodríguez-Martínez, C.~M., Rodríguez-Achach,
+  M.~E., \& Hernández-Enríquez, D. 2022, Mathematics, 10, 215, number: 2
+  Publisher: Multidisciplinary Digital Publishing Institute
+
+\bibitem[{Huang \& Raney-Yan(2021)}]{Huang2021}
+Huang, M.~L. \& Raney-Yan, X. 2021, Entropy, 23
+
+\bibitem[{Jakimowicz(2020)}]{jakimowicz_role_2020}
+Jakimowicz, A. 2020, Entropy, 22, 452, number: 4 Publisher: Multidisciplinary
+  Digital Publishing Institute
+
+\bibitem[{Martínez(????)}]{martinez_alisis_nodate}
+Martínez, C. M.~R. ????
+
+\end{thebibliography}
