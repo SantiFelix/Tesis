@@ -48,50 +48,51 @@ precios=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/precios.
 [precios]=read_plot_data(precios);
 
 
-%% returns calculation
+%% return and entropy calculation NO MAV
 pricevalues=(str2double(precios(:,1)));
 
 ret1=pricevalues(2:end) ./ pricevalues(1:end-1) -1;
+entropy=calc_entropy(window_entropy,ret1);
 
-ret1dated=[ret1(:),precios(1:end-1,2)];
+%% Calculate moving mean and entropy
 
-title=' ';
-figure
-figure_entropy(title, ret1dated, retorno,rgb,1)
+window=1;   %sliding window size for moving average
+window_entropy=50;   %window to calculate entropy shanon
+q=0.1;  %percentil to consider a minimum entropy
+nq = 3; %default for havin quartile, change to have n+1 quantile
+% Calculate similitud between MAV and no MAV entropy
+win_similarity=[];
+i=1;
+for window=5:5:100
+    [entropyMAV, similarity] = entropy_comparisons(precios,entropy, window, window_entropy, q, nq);
+    win_similarity(i)=similarity;
+    i=i+1;
+end
+%% Calculate similitud between diferent quantile size entropy
+q_similarity=[];
+window=1;   %sliding window size for moving average
+i=1;
+for nq=3:1:40
+    [entropyMAV, similarity] = entropy_comparisons(precios,entropy, window, window_entropy, q, nq);
+    q_similarity(i)=similarity;
+    i=i+1;
+end
 
 
-%% Calculate moving mean 
 
-k=50;
-MAVprice = movmean(str2double(precios(:,1)),[0,k-1]);
-
-retMAV=(MAVprice(2:end) ./ MAVprice(1:end-1) -1);
-
+%%  add dates
 MAVpricedated=[MAVprice(:),precios(:,2)];
-retMAVdated=[retMAV(1:end-50),precios(1:end-51,2)];
+retMAVdated=[retMAV(1:end-50),precios(1:end-51,2)]; %MAV returns dated
+
+ret1dated=[ret1(:),precios(1:end-1,2)]; %normal returns dated
 
 figure
 figure_entropy(title, retMAVdated, RetornoMAV,rgb,1)
 
 
-N=0;
-
-%% Calculate quartile and entropy
-
-window=50;
-q=0.1;
-
-entropyMAV=calc_entropy(window,retMAV);
-entropy=calc_entropy(window,ret1);
-min_entropyMAV=zeros(size(entropy));
-min_entropyMAV(entropyMAV<quantile(entropyMAV, q))=1;
-
-min_entropy=zeros(size(entropyMAV));
-min_entropy(entropy<quantile(entropy, q))=1;
-
-similarity=sum(abs(min_entropy-min_entropyMAV));
-
-%%%%%%
+title=' ';
+figure
+figure_entropy(title, ret1dated, retorno,rgb,1)
 %% plot entropy for DJJA data into matlab
 %%%%%%
 
