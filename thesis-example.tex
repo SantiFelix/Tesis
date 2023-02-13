@@ -149,12 +149,10 @@ bibstyle=alphabetic,%
 \listoftables
 \cleardoublepage
 
-\input{content/colophon}
-\cleardoublepage
 
-\input{content/declaration}
-\clearpage
-\newpage
+
+
+
 %\bibliography{refs}{}
 %\bibliographystyle{plain}
 
@@ -175,8 +173,10 @@ bibstyle=alphabetic,%
 % bibtool -s -d -x main.aux biblio.bib biblio2.bib biblio3.bib biblio4.bib> biblioall2.bib
 
 % bibtool -s -d -x main.aux ep.bib Planck_bib.bib biblioall.bib bibliography.bib> biblioall2.bib
-\bibliography{biblio}
 
+
+
+\bibliography{biblio.bib}
 % **************************************************
 % End of Document CONTENT
 % **************************************************
