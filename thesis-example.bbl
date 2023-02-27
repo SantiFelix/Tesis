@@ -1,5 +1,8 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{11}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Chan(2022)}]{chan2022knowledge}
+Chan, A.~P. 2022, arXiv preprint arXiv:2206.02363
 
 \bibitem[{Cottrell {et~al.}(2009)Cottrell, Cockshott, Michaelson, Wright, \&
   Yakovenko}]{cottrell_classical_2009}
@@ -7,7 +10,38 @@ Cottrell, A., Cockshott, P., Michaelson, G., Wright, I., \& Yakovenko, V. 2009,
   Classical {Econophysics}, Routledge {Advances} in {Experimental} and
   {Computable} {Economics} (Taylor \& Francis)
 
+\bibitem[{Dos~Santos {et~al.}(2012)Dos~Santos, Milidi{\'u}, dos Santos, \&
+  Milidi{\'u}}]{dos2012entropy}
+Dos~Santos, C.~N., Milidi{\'u}, R.~L., dos Santos, C.~N., \& Milidi{\'u}, R.~L.
+  2012, Entropy guided transformation learning (Springer)
+
 \bibitem[{Huang \& Raney-Yan(2021)}]{Huang2021}
 Huang, M.~L. \& Raney-Yan, X. 2021, Entropy, 23
+
+\bibitem[{Jeremiah(2020)}]{tds}
+Jeremiah, L. 2020, Entropy and Information Gain in Decision Trees
+
+\bibitem[{Keszei(2011)}]{keszei2011chemical}
+Keszei, E. 2011, Chemical Thermodynamics: An Introduction (Springer Berlin
+  Heidelberg)
+
+\bibitem[{Pranto(2020)}]{medium}
+Pranto, B. 2020, Entropy Calculation, Information Gain and Decision Tree
+  Learning
+
+\bibitem[{Richmond {et~al.}(2013)Richmond, Mimkes, \& Hutzler}]{richmond}
+Richmond, P., Mimkes, J., \& Hutzler, S. 2013, Econophysics and Physical
+  Economics, Titolo collana (OUP Oxford)
+
+\bibitem[{Roehner(2002)}]{roehner2002patterns}
+Roehner, B. 2002, Patterns of Speculation: A Study in Observational
+  Econophysics (Cambridge University Press)
+
+\bibitem[{Samuelson \& Nordhaus(2009)}]{samuelson2009economics}
+Samuelson, P. \& Nordhaus, W. 2009, Economics (McGraw-Hill Education)
+
+\bibitem[{Struchtrup(2014)}]{struchtrup}
+Struchtrup, H. 2014, Thermodynamics and Energy Conversion (Springer Berlin
+  Heidelberg)
 
 \end{thebibliography}
