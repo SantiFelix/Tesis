@@ -63,23 +63,23 @@ El logaritmo de los precios muestra que están normalmente distribuídos, al men
 
 Los retornos son expresados como:
 \begin{center}
-$R_t=P_{t+1}-P_t$
+$R_t=P_{t+1}-P_t$~~.
 \end{center}
 Es decir, el retorno del precio en cuestión ( $R_t$ ) es equivalente al precio individual de su sucesor temporal ( $P_{t+1}$ ) menos el precio del objeto temporal en turno ( $P_t$ ), sin embargo, siguiendo los ideales de Osborne, hay que calcular el logaritmo de los retornos a sabiendas de que los precios se etiquetan como $\mathit{Z_t}$ y son las variables de registro de las mediciones individuales diarias al cierre del mercado, donde \newline $t \in \mathcal{T} = \{\mathit{T_1,T_2,\ldots , T_M}\}$. El logaritmo del precio es:
 
 \begin{center}
-$\mathit{Y_{t}} = $ ln $\mathit{Z_{t}}$
+$\mathit{Y_{t}} = $ ln $\mathit{Z_{t}}$~~.
 \end{center}
 
 Entonces los \textit{retornos logarítmicos} son definidos como: 
 
 \begin{center}
-$X_t = $ $\mathit{Y_{t}} - $  $\mathit{Y_{t - 1}}$
+$X_t = $ $\mathit{Y_{t}} - $  $\mathit{Y_{t - 1}}$~~.
 \end{center}
 
 Cuya interpretación es la diferencia sucesiva de los logaritmos de los precios  registrados en el tiempo, en otras palabras, la diferencia del logaritmo del precio en turno y su antecesor temporal. Aunque en términos computacionales es mucho más sencillo trabajar con la siguiente expresión que respeta la proposición de Osborne (Frantisek Slanina, 2014): 
 \begin{center}
-ln $R_t = $ ln $\mathit{P_{t+1}} - $ ln $\mathit{P_{t}}$
+ln $R_t = $ ln $\mathit{P_{t+1}} - $ ln $\mathit{P_{t}}$.
 \end{center}%esto fue sacado de la pagina 132 y 133 del libro essentials of econophysics modeling
 
 
@@ -89,9 +89,9 @@ ln $R_t = $ ln $\mathit{P_{t+1}} - $ ln $\mathit{P_{t}}$
 La \textit{ley de la distribución de la probabilidad de la energía} en la \textit{mecánica estadística}:
 
 \begin{center}
-$\mathit{P(\varepsilon)} = $ C $e^{-\varepsilon/\mathit{T}}$ 
+$\mathit{P(\varepsilon)} = $ C $e^{-\varepsilon/\mathit{T}}$,
 \end{center}
-Donde:
+donde:
 
 $\varepsilon$ es la energía
 
@@ -110,7 +110,7 @@ De acuerdo con Cottrel, Michelson y Wright (Cottrell, Michelson, Wright, Classic
 
 
 \begin{center}
-$\mathit{P(d)} = $ C $e^{-d/\mathit{T}}$ 
+$\mathit{P(d)} = $ C $e^{-d/\mathit{T}}$,
 \end{center}
 Donde:
 
@@ -160,10 +160,10 @@ La segunda ley explica la restricción en la eficiencia y la dirección de los p
 Lo anterior se ha definido en la literatura mediante la siguiente ecuacuón:
 
 \begin{equation}
-dS \geqslant \frac{\delta Q}{T}
+dS \geqslant \frac{\delta Q}{T},
 \end{equation}
 
-Donde $\delta$ es la diferencial inexacta del calor $Q [J]$ , entre la temperatura $T [K]$, mientras que $dS$ es el diferencial de la entropía $S$ $\frac{[J]}{[K]}$. Esta relación indica que la entropía es incrementada en procesos espontáneos pero no cambia en equilibrio \citep[][pagina 340]{keszei2011chemical}. 
+donde $\delta$ es la diferencial inexacta del calor $Q [J]$ , entre la temperatura $T [K]$, mientras que $dS$ es el diferencial de la entropía $S$ $\frac{[J]}{[K]}$. Esta relación indica que la entropía es incrementada en procesos espontáneos pero no cambia en equilibrio \citep[][pagina 340]{keszei2011chemical}. 
 
 \subsubsection{Segunda Ley de la econofísica} 
 
@@ -190,41 +190,60 @@ En el contexto de enofisica, la entropie es la medida de un número total de mic
 
 Es la medida de un número total de microestados económicos accesibles o disponibles que pertenecen a un macroestado ( mercado-estado fase "económico"), por analogía, la energía mide la probabilidad de que un estado en particular en un espacio fase "económico" sea alcanzado \citep{richmond}.
 
-\subsection{Ecuación de Boltzmann para la entropía}
+\subsection{La ecuación de la entropía}
 
-Para moléculas en un espacio fase definido, la entropía $S$ para un macroestado termodinámico es:
+La ecuacion de Boltzman para la entropia esta definida como:
 
 \begin{equation}
-	S = -k_B \int p(\Gamma,t) ln p(\Gamma,t) d\Gamma
+	S = -k_B \int p(\Gamma,t) ln p(\Gamma,t) d\Gamma.
+	\label{entropyB}
 \end{equation}
- en donde $k_B$ es la constante de Boltzmann, $ p(\Gamma,t)$ es la función de densidad de probabilidad en el tiempo de $\Gamma$, donde $\Gamma$ engloba a las variables de posición y momento del espacio fase \citep[][pagina 13]{richmond}. Cabe mencionar que un \textit{macroestado} esta relacionado con las variables temperatura, presión, volumen.
+En esta ecuacion la entropía $S$ es definida para moléculas en un espacio fase determinado  en un macroestado termodinámico.
+En la ecuacion \ref{entropyB} $k_B$ es la constante de Boltzmann, $ p(\Gamma,t)$ es la función de densidad de probabilidad en el tiempo de $\Gamma$. $\Gamma$ engloba a las variables de posición y momento del espacio fase \citep[][pagina 13]{richmond}. Cabe mencionar que un macroestado esta relacionado con las variables temperatura, presión, volumen.
  
- En el estudio de microestados discretos contables y accesibles, la ecuación es: 
+Por otro lado, en el estudio de microestados discretos contables y accesibles, la ecuación de la entropia es: 
  
  \begin{equation}
- 	S = -k_B \Sigma p_r ln p_r
+ 	S = -k_B \Sigma p_r ln p_r.
  \end{equation}  
 
 Donde $p_r$ es la probabilidad de un microestado. 
 
-\subsection{Ecuación de Shannon para la entropía.}
-
-En este trabajo de tesis se define como la cantidad de perdida y ganancia de información en un conjunto de datos.
+Otra definicion de la entropia es dada por la ecuacion de Shannon \ref{entropySha}
+En este trabajo de Tesis se define como la cantidad de perdida y ganancia de información en un conjunto de datos.
 
 \begin{equation}
-	H = - \sum_{n=1}^{n} p_i log(p_i)
+	H = - \sum_{n=1}^{n} p_i log(p_i).
+	\label{entropySha}
 \end{equation}
 
 Donde $p_i$ es la probabilidad del dato en cuestión. 
 
-\subsection{Aplicación de la ecuación de Shannon para la entropía.}
+\section{Aplicaciones de la ecuación de Shannon para la entropía.}
 
-Aunque este trabajo de tesis no está orientado a la inteligencia artificial, resulta interesante que este campo estudia el concepto de entropía de la información, Ruy Luiz y Cicero Nogueira utilizan este concepto para estudiar la impureza de una colección arbitraria de datos. Al hacer una clasificación y etiquetar, obtienen lo que habían planteado en su hipotesis que es una reducción en la entropía, en otras palabras hubo una ganancia de información\citep[página 14][]{dos2012entropy}. 
+Aunque este trabajo de Tesis no está orientado a la inteligencia artificial (AI por sus siglas en ingles), resulta interesante que la AI aplica el concepto de entropía de la información. 
+Por ejemplo \citep{dos2012entropy} utilizan el concepto de entropia para analizar la impureza de una base de datos. 
+Ellos estan interesados en analizar las edades de las personas y los alimentos de su preferencia. 
+Su metodo aplica una reducción en la entropía antes de procesar la base de datos con un arbol de decisiones. 
+Esto les permitió tener una ganancia de información\citep[][]{dos2012entropy}. 
+Al hacer una clasificación y etiquetar, obtuvieron los resultados que habían planteado en su hipotesis.
 
-En este punto resulta interesante comprender el alcance que tiene esta ecuación no solamente en la termodinámica, tal como se habla en una publicación llamada \textit{Entropy Calculation, Information Gain and Decision Tree Learning} de medium \citep[][]{medium}. La publicación habla de como un árbol de decisiones en inteligencia artificial deberá decidir con base en la no homogeneidad de los datos que rama tomar. Vale la pena recordar que un árbol de decisiones tiene tres líneas que son si, no, y entonces. 
+En este punto resulta interesante comprender el alcance que tiene la ecuacion de Shanon, no solamente en la termodinámica. 
+Por ejemplo, en la publicación \textit{Entropy Calculation, Information Gain and Decision Tree Learning} del sitio web medium \citep[][]{medium} aplican la entropia para mejorar el modelo de arboles de decisiones.
+En inteligencia artificial un arbol de decisiones es frecuentemente utilizado como clasificador de bases de datos.
+Calcular la entropia permite tomar los atributos mas importantes de la base de datos para la creacion de un arbol de decisiones asi como medir la homogeneidad de los datos. 
+Por consecuencia, puede ayudar a determinar la calidad del arbol de decisiones. 
 
-En otra pubicación hecha en el portal tds(towards data science) \citep[][]{tds}, se utiliza el mismo concepto de un árbol de decisiones y se tiene como objetivo que el algoritmo de inteligencia artificial determine la línea a seguir con base en la cantidad de información que presenta tanto un campo con respecto del otro. 
+En otra publicación hecha en el portal tds (towards data science) \citep[][]{tds}, se utiliza el mismo concepto de un árbol de decisiones.
+En este caso se tiene como objetivo que el algoritmo de inteligencia artificial determine el impacto de un atributo con respecto otro basado en la cantidad de información que presentan/
 
-La ecuación de la entropía de Shannon no solamente se aplica para árboles de decisión, también se ha utilizado para mostrar que algunos textos poseen más riqueza en su contenido con respecto a un tema. Además se menciona que en comparación con las técnicas tradicionales del aprendizaje-máquina, su aplicación disminuye la tasa de falsos positivos en relación con las palabras clave que se refieren a un tema en particular \citep[][]{chan2022knowledge} .   
+La ecuación de la entropía de Shannon no solamente se aplica para árboles de decisión, también se ha utilizado para mostrar que algunos textos poseen más riqueza en su contenido con respecto a un tema. 
+Además se menciona que en comparación con las técnicas tradicionales del aprendizaje-máquina.
+La aplicacion de la entropia de Shannon disminuye la tasa de falsos positivos en relación con las palabras clave que se refieren a un tema en particular \citep[][]{chan2022knowledge}.   
  
+\subsection{La entropia aplicada a la econofisica}
+
+Montoya et al.,
+Martinez et al.,
+
 
