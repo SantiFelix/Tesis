@@ -98,3 +98,6 @@ Por lo anterior, se propone utilizar como umbral para hallar los valores mínimo
 
 Entonces, al realizar un gráfico que muestra la distribución de la entropía, y dado que la entropía es obtenida a partir de probabilidades, es fácil obtener cualquier cuantil (percentil 95 en el caso del intervalo de confianza), además que dicho percentil permite diferenciar aquellos valores de la entropía que son ruido de aquellos que no. 
 
+
+
+
