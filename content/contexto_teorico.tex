@@ -139,11 +139,11 @@ como descrito en \citep{Huang2021}.
 
 
 %Para mas infor ver \citep{hernandez-montoya_entropy_2022,jakimowicz_role_2020,martinez_alisis_nodate}.
-Existe una formulación conocida por Kelvin-Planck que dice "No hay proceso termodinámico en estado constante para el cual el calor es completamente convertido en trabajo" (pg.86, ThermodynamicsAndEnergyConvers, Springer)
+Existe una formulación conocida por Kelvin-Planck que dice : \textit{No hay proceso termodinámico en estado constante para el cual el calor es completamente convertido en trabajo} \citep[][pagina 86]{struchtrup}.
 
-Sin embargo, la primera derivación de la segunda ley fue dada por Rudolf Clausius (1822-1888) basada en el argumento de que la dirección en que se transfiere el calor esta restringida y depende estrictamente de las declaraciones en ciclos termodinámicos (pg. 55,ThermodynamicsAndEnergyConvers, Springer) . Del desarrollo de la segunda ley por Clausius se tiene que "el calor irá del calor al frío por sí mismo, y no al revés" (pg. 64, ThermodynamicsAndEnergyConvers, Springer)
+Sin embargo, la primera derivación de la segunda ley fue dada por Rudolf Clausius (1822-1888) basada en el argumento de que la dirección en que se transfiere el calor esta restringida y depende estrictamente de las declaraciones en ciclos termodinámicos \citep[][pagina 55]{struchtrup}.  Del desarrollo de la segunda ley por Clausius se tiene que \textit{el calor irá del calor al frío por sí mismo, y no al revés} \citep[][pagina 64]{struchtrup}.
 
-La segunda ley explica la restricción de la eficiencia y la dirección de los procesos, "el calor no puede ser completamente convertido en trabajo" (pg. 5, ThermodynamicsAndEnergyConvers, Springer). 
+La segunda ley explica la restricción en la eficiencia y la dirección de los procesos, \textit{el calor no puede ser completamente convertido en trabajo} \citep[][pagina 5]{struchtrup}. 
 
 Lo anterior se ha definido en la literatura mediante la siguiente ecuacuón:
 
@@ -151,29 +151,65 @@ Lo anterior se ha definido en la literatura mediante la siguiente ecuacuón:
 dS \geqslant \frac{\delta Q}{T}
 \end{equation}
 
-Donde $\delta$ es la diferencial inexacta del calor $Q [J]$ , entre la temperatura $T [K]$, mientras que $dS$ es el diferencial de la entropía $S$ $\frac{[J]}{[K]}$. Esta relación indica que la entropía es incrementada en procesos espontáneos pero no cambia en equilibrio (pg.340 ,BookChemicalThermodynamics, Springer).
+Donde $\delta$ es la diferencial inexacta del calor $Q [J]$ , entre la temperatura $T [K]$, mientras que $dS$ es el diferencial de la entropía $S$ $\frac{[J]}{[K]}$. Esta relación indica que la entropía es incrementada en procesos espontáneos pero no cambia en equilibrio \citep[][pagina 340]{keszei2011chemical}. 
 
 \subsection{Segunda Ley de la econofísica} 
 
-Por analogía con la sección anterior, se llama a $S$ como $S_e$ que es la entropía económica (Georgescu-Roegen, 1971), aunque $S_e$ será una cantidad adimensional, mientras que la constante $\lambda$ es un factor integrante cuya unidad de medida es la moneda según sea el caso (pg. 166, Richmond, econophysics), y en vez de $Q$ se ocupa $M$ que en este caso es el dinero. 
+Por analogía con la sección anterior, se llama a $S$ como $S_e$ que es la entropía económica (Georgescu-Roegen, 1971), aunque $S_e$ será una cantidad adimensional, mientras que la constante $\lambda$ es un factor integrante cuya unidad de medida es la moneda según sea el caso \citep[][pagina 166]{richmond} , y en vez de $Q$ se ocupa $M$ que en este caso es el dinero. 
 
 \begin{equation}
 dS_e \geqslant \frac{\delta M}{\lambda}
 \end{equation}
 
-Es preciso mencionar que en Economía $S_e$ se le llama función de producción. En el presente trabajo de tesis no se determina el factor integrante, aunque existen métodos para obtenerlo, en termodinámica se utiliza la constante de Boltzmann debido a enlace entre temperatura y energía. (pg. 166, Richmond, econophysics)
+Es preciso mencionar que en Economía $S_e$ se le llama función de producción. En el presente trabajo de tesis no se determina el factor integrante, aunque existen métodos para obtenerlo, en termodinámica se utiliza la constante de Boltzmann debido a enlace entre temperatura y energía \citep[][pagina 166]{richmond}. 
 
 \subsection{Entropía en la termodinámica} 
 
-Para Clausius en 1865 la entropía es una energía inutilizable que puede provenir de por ejemplo, de un motor de vapor que utiliza combustible, irremediablemente una cantidad de energía no será aprovechada. Adicionalmente sostiene que la energía inutilizable en el universo o cualquier sistema cerrado tiende a incrementar (pg. 21, Cottrell, Econophysics). 
+Para Clausius en 1865 la entropía es una energía inutilizable que puede provenir de por ejemplo, de un motor de vapor que utiliza combustible, irremediablemente una cantidad de energía no será aprovechada. Adicionalmente sostiene que la energía inutilizable en el universo o cualquier sistema cerrado tiende a incrementar \citep[][pagina 21]{cottrell_classical_2009}. 
 
-La entropía es una cantidad que surge cuando se construye una desigualdad que describe la tendencia al equilibrio (pg.70,BookChemicalThermodynamics, Springer ).
+La entropía es una cantidad que surge cuando se construye una desigualdad que describe la tendencia al equilibrio  \citep[][pagina 70]{keszei2011chemical}. 
 
 
 
 \subsection{Entropía en la econofísica} 
 
-Es la medida de un número total de microestados económicos accesibles o disponibles que pertenecen a un macroestado ( mercado-estado fase "económico"), por analogía, la energía mide la probabilidad de que un estado en particular en un espacio fase "económico" sea alcanzado. (pg.200, Richmond, Econophysics) \citep{cottrell_classical_2009}
+Es la medida de un número total de microestados económicos accesibles o disponibles que pertenecen a un macroestado ( mercado-estado fase "económico"), por analogía, la energía mide la probabilidad de que un estado en particular en un espacio fase "económico" sea alcanzado \citep{richmond}.
 
-\subsection{Entropía en la mecánica estadística} 
+\subsection{Ecuación de Boltzmann para la entropía}
+
+Para moléculas en un espacio fase definido, la entropía $S$ para un macroestado termodinámico es:
+
+\begin{equation}
+	S = -k_B \int p(\Gamma,t) ln p(\Gamma,t) d\Gamma
+\end{equation}
+ en donde $k_B$ es la constante de Boltzmann, $ p(\Gamma,t)$ es la función de densidad de probabilidad en el tiempo de $\Gamma$, donde $\Gamma$ engloba a las variables de posición y momento del espacio fase \citep[][pagina 13]{richmond}. Cabe mencionar que un \textit{macroestado} esta relacionado con las variables temperatura, presión, volumen.
+ 
+ En el estudio de microestados discretos contables y accesibles, la ecuación es: 
+ 
+ \begin{equation}
+ 	S = -k_B \Sigma p_r ln p_r
+ \end{equation}  
+
+Donde $p_r$ es la probabilidad de un microestado. 
+
+\subsection{Ecuación de Shannon para la entropía.}
+
+En este trabajo de tesis se define como la cantidad de perdida y ganancia de información en un conjunto de datos.
+
+\begin{equation}
+	H = - \sum_{n=1}^{n} p_i log(p_i)
+\end{equation}
+
+Donde $p_i$ es la probabilidad del dato en cuestión. 
+
+\subsection{Aplicación de la ecuación de Shannon para la entropía.}
+
+Aunque este trabajo de tesis no está orientado a la inteligencia artificial, resulta interesante que este campo estudia el concepto de entropía de la información, Ruy Luiz y Cicero Nogueira utilizan este concepto para estudiar la impureza de una colección arbitraria de datos. Al hacer una clasificación y etiquetar, obtienen lo que habían planteado en su hipotesis que es una reducción en la entropía, en otras palabras hubo una ganancia de información\citep[página 14][]{dos2012entropy}. 
+
+En este punto resulta interesante comprender el alcance que tiene esta ecuación no solamente en la termodinámica, tal como se habla en una publicación llamada \textit{Entropy Calculation, Information Gain and Decision Tree Learning} de medium \citep[][]{medium}. La publicación habla de como un árbol de decisiones en inteligencia artificial deberá decidir con base en la no homogeneidad de los datos que rama tomar. Vale la pena recordar que un árbol de decisiones tiene tres líneas que son si, no, y entonces. 
+
+En otra pubicación hecha en el portal tds(towards data science) \citep[][]{tds}, se utiliza el mismo concepto de un árbol de decisiones y se tiene como objetivo que el algoritmo de inteligencia artificial determine la línea a seguir con base en la cantidad de información que presenta tanto un campo con respecto del otro. 
+
+La ecuación de la entropía de Shannon no solamente se aplica para árboles de decisión, también se ha utilizado para mostrar que algunos textos poseen más riqueza en su contenido con respecto a un tema. Además se menciona que en comparación con las técnicas tradicionales del aprendizaje-máquina, su aplicación disminuye la tasa de falsos positivos en relación con las palabras clave que se refieren a un tema en particular \citep[][]{chan2022knowledge} .   
+ 
 
