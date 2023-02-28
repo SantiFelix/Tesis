@@ -7,45 +7,51 @@ Warning--entry type for "medium" isn't style-file defined
 --line 219 of file biblio.bib.bib
 Warning--entry type for "tds" isn't style-file defined
 --line 234 of file biblio.bib.bib
-You've used 11 entries,
+Repeated entry---line 418 of file biblio.bib.bib
+ : @book{cottrell_classical_2009
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--I'm ignoring Pesaran2010's extra "title" field
+--line 461 of file biblio.bib.bib
+You've used 14 entries,
             2947 wiz_defined-function locations,
-            701 strings with 5878 characters,
-and the built_in function-call counts, 4010 in all, are:
-= -- 320
-> -- 230
-< -- 8
-+ -- 79
-- -- 66
-* -- 293
-:= -- 760
-add.period$ -- 11
-call.type$ -- 11
-change.case$ -- 66
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 184
-empty$ -- 321
-format.name$ -- 91
-if$ -- 789
+            720 strings with 6399 characters,
+and the built_in function-call counts, 4915 in all, are:
+= -- 400
+> -- 263
+< -- 11
++ -- 91
+- -- 75
+* -- 347
+:= -- 942
+add.period$ -- 14
+call.type$ -- 14
+change.case$ -- 81
+chr.to.int$ -- 14
+cite$ -- 14
+duplicate$ -- 233
+empty$ -- 389
+format.name$ -- 103
+if$ -- 962
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 37
-num.names$ -- 44
-pop$ -- 79
+missing$ -- 12
+newline$ -- 46
+num.names$ -- 56
+pop$ -- 93
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 81
 quote$ -- 0
-skip$ -- 177
+skip$ -- 219
 stack$ -- 0
-substring$ -- 123
+substring$ -- 166
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 105
 warning$ -- 0
-while$ -- 33
+while$ -- 43
 width$ -- 0
-write$ -- 110
-(There were 2 warnings)
+write$ -- 138
+(There was 1 error message)

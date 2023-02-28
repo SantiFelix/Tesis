@@ -11,27 +11,90 @@ Esto se traduce como un intervalo de tiempo en el que el precio no cambia signif
 
 Descripcion de metodo aplicado para entropia  ver diagrama \ref{diagramaentropia1}.
 
-\subsection{Datos}
-Los datos del utilizados en esta Tesis fueron obtenidos del portal Yahoo Finance.
-Estos datos corresponden a los registros del precio de cierre de cada dia.
-
- además dichos datos fueron depurados y ordenados ya que había algunos espacios en blanco en el archivo original, entonces el software con que se trabaja interpreta los datos sin errores. 
-
-Luego que se han cargado los datos, y se han ordenado es necesario calcular los retornos de los precios. La razón por la que se trabajan los retornos de los precios y no se trabaja directamente con los precios ya que no poseen estacionaridad en el tiempo y ello conlleva a que no va a haber una media central en los datos. Los retornos permiten analizar fácilmente la tasa de cambio en el tiempo. 
-
-Aunque los retornos son una mejor representación de los precios, aún presentan picos que sobresalen de la media. La estandarización permite destacar los retornos que realmente son relevantes. 
-
-Ya que cada retorno ha sido estandarizado con su respectiva fecha,  se procede a discretizar los retornos mediante un proceso que divide en cuatro intervalos a los retornos. Determinar los cuartiles de los retornos y discretizarlos con base en la etiqueta que se pone a cada intervalo, en otras palabras, los intervalos van a permitir etiquetar del 1 al 4 a cada retorno. 
-
-La ecuación de la entropía requiere conocer la probabilidad de los elementos del sistema, con los intervalos dados por los cuartiles y la discretización de los retornos se obtiene todo lo necesario para calcular la entropía, sin embargo, no se calcula la entropía de todo el conjunto de datos, se hace por subconjuntos de datos agrupados en listas de 50 elementos, o cualquier número dado por el usuario.
-
-El resultado de la entropia es dado en valores y fechas para cada subconjunto de días.
-
-\begin{figure}
+\begin{figure}[h]
+	\centering
 	\includegraphics[width=0.7\linewidth]{figures/diagrama_entropia1}
 	\caption{Diagrama del algoritmo utilizado para el c\'alculo de entrop\'ia de Shanon en mercados financieros.}
 	\label{diagramaentropia1}
 \end{figure}
+
+
+\section{Algoritmo para el calculo de entropia}
+
+La metodologia implementada para el calculo de la entropia asi como el procesamiento de datos se presenta en el diagrama \ref{diagramaentropia1}.
+En este diagrama se identifican cuatro etapas principales:
+
+\begin{itemize}
+	\item Carga de datos
+	\item Pre-procesamiento de datos
+	\item Calculo de retornos y cuartiles
+	\item Calculo de entropia
+\end{itemize}
+
+\subsection{Procesamiento de datos de precios de mercados}
+
+Los precios de los mercados utilizados en esta Tesis fueron obtenidos del portal Yahoo Finance. 
+Cabe mencionar que los precios son registrados cada 24h excepto los dias sabado y domingo.
+Se descargaron las datos de precios entre DD/MM/YYYY y DD/MM/YYYY de los mercados AAA, BBB, CCC, y DDD.
+
+Un ejemplo de la base de datos de precios descargada se presenta en la tabla \ref{ejemplo_data}.
+Las columnas de la base de datos corresponden a la fecha en la que se realizo el registro de precio respectivo.
+Las bases de datos de cada uno de los mercados fueron depuradas y ordenadas. Esta depuracion corresponde a identificar y eliminar las fechas en las que no hay precio registrado. De este modo se evitan errores de calculo.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline 
+	Fecha & precio \\ 
+	\hline 
+	DD/MM/YYYY & $$$$ \\ 
+	\hline 
+	DD/MM/YYYY & $$$$ \\ 
+	\hline 
+	DD/MM/YYYY & $$$$ \\ 
+	\hline 
+\end{tabular} 
+	\label{ejemplo_data}
+\end{center}
+
+\subsection{Calculo de retornos de precios de mercados}
+
+Luego que se han cargado los datos, y se han ordenado es necesario calcular los retornos de los precios. 
+%y ello conlleva a que no va a haber una media central en los datos. 
+Los retornos permiten analizar fácilmente la tasa de cambio en el tiempo.
+En esta Tesis se eligio trabajar con los retornos de los precios y no con los precios directamente debido a las propiedades de los retornos presentadas en la subseccion \ref{retornos}.
+Aunque los retornos son una mejor representación de los precios, aún presentan picos que sobresalen de la media. 
+%La estandarización permite destacar los retornos que realmente son relevantes. 
+%%%-----NO SE APLICO ESTANDARIZACION NO ?????
+%Ya que cada retorno ha sido estandarizado con su respectiva fecha,  
+Posteriormente se procede a discretizar los retornos mediante un proceso que divide en cuatro intervalos a los retornos. 
+Esto se hace mediante el calculo de los cuartiles de los retornos. 
+A cada cuartil se le asigna una etiqueta lo que permite discretizarlos . 
+En otras palabras, los intervalos van a permitir etiquetar del 1 al 4 a cada retorno. 
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline 
+		Fecha & retorno & cuartil \\ 
+		\hline 
+		DD/MM/YYYY & $$$$ & 1\\ 
+		\hline 
+		DD/MM/YYYY & $$$$ & 2\\ 
+		\hline 
+		DD/MM/YYYY & $$$$ & 4\\ 
+		\hline 
+	\end{tabular} 
+	\label{ejemplo_data-returns}
+\end{center}
+
+\subsection{Calculo de la entropia}
+
+La ecuación de la entropía requiere conocer la probabilidad de los elementos del sistema, 
+con los intervalos dados por los cuartiles y la discretización de los retornos se obtiene todo lo necesario para calcular la entropía, sin embargo, no se calcula la entropía de todo el conjunto de datos, se hace por subconjuntos de datos agrupados en listas de 50 elementos, o cualquier número dado por el usuario.
+
+El resultado de la entropia es dado en valores y fechas para cada subconjunto de días.
+
+
+
 
 \subsection{Entropía utlizando medias moviles}
 

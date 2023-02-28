@@ -56,9 +56,11 @@ Este y otros conceptos de economia pueden ser consultados en el capitulo \ref{gl
 %---------------------------------------------------------------------------
 %Introducir RETORNOS en el texto
 %Se define como  r($\mathit{t_{i}}$) $\equiv $ \textit{x}$(\mathit{t}_{i})$ - \textit{x}($\mathit{t}_{i} - \Delta t$) , donde \textit{x}($\mathit{t}_{i}$ es una secuencia de precios logarítmicos 
-Los retornos son usualmente variables de análisis más rentables que el precio perse, por varias razones. La distribución de los retornos es más simétrica y estable en el tiempo que la distribución de los precios en sí. La estructura de los retornos es cercana a estacionaria, mientras que la estructura de los precios observados en el tiempo no lo es (Dacoragna, Et Al, 2001).
+Los retornos son usualmente variables de análisis más rentables que el precio perse, por varias razones. 
+La distribución de los retornos es más simétrica y estable en el tiempo que la distribución de los precios en sí. 
+La estructura de los retornos es cercana a estacionaria, mientras que la estructura de los precios observados en el tiempo no lo es \textbf{(Dacoragna, Et Al, 2001).}
 
-El logaritmo de los precios muestra que están normalmente distribuídos, al menos aproximadamente (M.F.M. Osborne, 1959). En este trabajo de tesis se trabaja con los retornos de los registros diarios individuales de cada serie de tiempo financiera, en otras palabras, la ventana temporal entre cada \guillemotleft tick\guillemotright~ es constante y se le conoce como \textit{lag} la cual se denota como $\delta t$. 
+El logaritmo de los precios muestra que están normalmente distribuídos, al menos aproximadamente\textbf{ (M.F.M. Osborne, 1959).} En este trabajo de tesis se trabaja con los retornos de los registros diarios individuales de cada serie de tiempo financiera, en otras palabras, la ventana temporal entre cada \guillemotleft tick\guillemotright~ es constante y se le conoce como \textit{lag} la cual se denota como $\delta t$. 
 
 
 Los retornos son expresados como:
@@ -77,10 +79,36 @@ Entonces los \textit{retornos logarítmicos} son definidos como:
 $X_t = $ $\mathit{Y_{t}} - $  $\mathit{Y_{t - 1}}$~~.
 \end{center}
 
-Cuya interpretación es la diferencia sucesiva de los logaritmos de los precios  registrados en el tiempo, en otras palabras, la diferencia del logaritmo del precio en turno y su antecesor temporal. Aunque en términos computacionales es mucho más sencillo trabajar con la siguiente expresión que respeta la proposición de Osborne (Frantisek Slanina, 2014): 
+Cuya interpretación es la diferencia sucesiva de los logaritmos de los precios  registrados en el tiempo, en otras palabras, la diferencia del logaritmo del precio en turno y su antecesor temporal. Aunque en términos computacionales es mucho más sencillo trabajar con la siguiente expresión que respeta la proposición de Osborne\textbf{ (Frantisek Slanina, 2014): }
 \begin{center}
 ln $R_t = $ ln $\mathit{P_{t+1}} - $ ln $\mathit{P_{t}}$.
 \end{center}%esto fue sacado de la pagina 132 y 133 del libro essentials of econophysics modeling
+
+
+\subsection{Propiedades de los retornos}
+\label{retornos}
+Podemos citar algunas propiedades de los retornos propuestas por \cite{Cont2001}:
+
+\begin{itemize}
+	\item {Ausencia de auto correlacion: Las autocorrelaciones lineales no son significativas en la mayoria de los casos}
+	\item {Colas largas: La distribucion de retornos parece seguir una ley de potencias.}
+		%the (unconditional) distribution of returns
+		%seems to display a power-law or Pareto-like tail, with
+		%a tail index which is finite, higher than two and less
+		%than five for most data sets studied. }
+	\item Asimetria Ganancia/Perdida: Se observan bajas mas claramente que altas en los precios. 
+	\item Gaussionidad agregada (aggregational gaussianity): cuando se aumenta el intervalo de tiempo en el que se calculan los retorno se observa que el valor de los retornos sigue una distribucion gaussiana. 
+	\item Intermitencia: los retornos muestran un gran grado de variabilidad.
+	\item Asimetria en escalas de tiempo: a mayor intervalo de tiempo los retornos muestran volatilidad mas facilmente que cuando el intervalo de tiempo es menor.
+\end{itemize}
+
+Ademas de las propiedades listadas arriba, algunas definiciones de mercado eficiente implican que los retornos no son predecibles. Por ejemplo, Arthur Stalla-Bourdillon de la Banca de Francia en su articulo \textit{Stock Return Predictability: comparing Macro- and Micro-Approaches} \citep{stalla-bourdillon_stock_2022} da el siguiente ejemplo:
+\begin{quotation}
+\textit{Dado que toda la informacion esta contenida en los precios del mercado, cambios en el mercado puede solo ser causados por la llegada de nueva informacion, que es por definicion, impredecible. En otras palabras, los precios deben seguir una caminata aleatoria; una regresion de retornos basada en informaicion pasada no debe contener informacion predictiva}.
+\end{quotation}
+La predictividad de los retornos asi como sus propiedades estadisticas son discutidas en profundidad por \cite{Pesaran2010}.
+En su articulo, Pesaran menciona que la predictibilidad de los retornos puede ser asociada a la volatilidad del mercado sugiriendo que la predictividad se incrementa en tiempos de crisis. 
+
 
 
 \section{Analogías Física-Economía} 
