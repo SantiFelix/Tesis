@@ -13,45 +13,45 @@ Repeated entry---line 418 of file biblio.bib.bib
 I'm skipping whatever remains of this entry
 Warning--I'm ignoring Pesaran2010's extra "title" field
 --line 461 of file biblio.bib.bib
-You've used 14 entries,
+You've used 19 entries,
             2947 wiz_defined-function locations,
-            720 strings with 6399 characters,
-and the built_in function-call counts, 4915 in all, are:
-= -- 400
-> -- 263
-< -- 11
-+ -- 91
-- -- 75
-* -- 347
-:= -- 942
-add.period$ -- 14
-call.type$ -- 14
-change.case$ -- 81
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 233
-empty$ -- 389
-format.name$ -- 103
-if$ -- 962
+            751 strings with 7066 characters,
+and the built_in function-call counts, 6973 in all, are:
+= -- 569
+> -- 387
+< -- 14
++ -- 134
+- -- 111
+* -- 509
+:= -- 1319
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 113
+chr.to.int$ -- 19
+cite$ -- 19
+duplicate$ -- 322
+empty$ -- 537
+format.name$ -- 152
+if$ -- 1374
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 46
-num.names$ -- 56
-pop$ -- 93
+missing$ -- 17
+newline$ -- 61
+num.names$ -- 76
+pop$ -- 130
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 113
 quote$ -- 0
-skip$ -- 219
+skip$ -- 304
 stack$ -- 0
-substring$ -- 166
+substring$ -- 259
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 105
+type$ -- 144
 warning$ -- 0
-while$ -- 43
+while$ -- 61
 width$ -- 0
-write$ -- 138
+write$ -- 188
 (There was 1 error message)
