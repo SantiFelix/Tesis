@@ -29,9 +29,10 @@ En \textit{Física}, un sistema cerrado conserva la energía,  en \textit{Econom
 De la anterior analogía se entiende que no hay un flujo externo de dinero, por lo que la cantidad total de dinero se conserva.
 
 La \textit{mecánica estadísitica} estudiada por los físicos, y la economía, tienen en común que ambas estudian grandes ensambles; colecciones de átomos, y agentes económicos, respectivamente.
-(Cottrell, Michelson, Wright, Classical Econophysics, pg.149)
+\citep[][pagina 149]{cottrell_classical_2009}.
 
-\textit{De la anterior analogía, en una colección de átomos se asume que cada uno de ellos posee una energía cinética $\mathit{\varepsilon}_{i} \geqslant 0 $, mientras que en los mercados financieros cada uno de los agentes participantes tiene un recurso llamado dinero el cual no puede ser negativo, es decir  $\mathit{d}_{i} \geqslant 0 $}.(Cottrell, Michelson, Wright, Classical Econophysics, pg.149)
+\textit{De la anterior analogía, en una colección de átomos se asume que cada uno de ellos posee una energía cinética $\mathit{\varepsilon}_{i} \geqslant 0 $, mientras que en los mercados financieros cada uno de los agentes participantes tiene un recurso llamado dinero el cual no puede ser negativo, es decir  $\mathit{d}_{i} \geqslant 0 $} \citep[][pagina 149]{cottrell_classical_2009}.
+
 
 En el contexto de la mecanica estadistica se define un ensamble microcanónico como un conjunto  en el que las características y el comportamiento de los componentes son similares, posee entropía máxima y conservación de energía. Gracias a su naturaleza física, es posible estudiarle como un todo.  
 
@@ -44,12 +45,14 @@ En los comienzos de la \textit{Econofísica} se encuentran emblemáticos persona
 Una de sus mayores contribuciones es considerar una transaccion como una consecuencia determinista del intercambio de bienes entre dos agentes.
 Esta consideracion es innovante con respecto al las corrientes economicas y sociales del siglo XIX (e.g. aspectos sociales,  factores politicos, a distribucipon de la riqueza). 
 
-Esta innovacion permite a la \textit{Econofísica} estudiar los sistemas complejos intrínsecos de la \textit{Economía}. La econofisica entonces considera que sistema complejo esta compuesto de un gran número de \textit{grados de libertad} en diferentes escalas de tiempo \underline{(Richmond Econophysics pg 17)}.
+Esta innovacion permite a la \textit{Econofísica} estudiar los sistemas complejos intrínsecos de la \textit{Economía}. La econofisica entonces considera que sistema complejo esta compuesto de un gran número de \textit{grados de libertad} en diferentes escalas de tiempo  \citep[][pagina 17]{richmond}.
 
 La \textit{Economía neoclásica} puede ser considerafa como la corriente de pensamiento que da lugar a la \textit{Econofísica}. Del mismo modo que Pareto estudió la distribución de la riqueza en el siglo XIX, Adam Smith propuso la descripción de un fenómeno llamado \textit{la mano invisible}. 
 Este y otros conceptos de economia pueden ser consultados en el capitulo \ref{glosario}.
 
+\subsubsection*{Función de utilidad}
 
+Se utiliza para encontrar el numero optimo de diferentes profesionales en una compañia, la mejor eleccion de acciones de un mercado \citep[][]{richmond}. 
 
 
 \subsection{Retornos} 
@@ -58,9 +61,9 @@ Este y otros conceptos de economia pueden ser consultados en el capitulo \ref{gl
 %Se define como  r($\mathit{t_{i}}$) $\equiv $ \textit{x}$(\mathit{t}_{i})$ - \textit{x}($\mathit{t}_{i} - \Delta t$) , donde \textit{x}($\mathit{t}_{i}$ es una secuencia de precios logarítmicos 
 Los retornos son usualmente variables de análisis más rentables que el precio perse, por varias razones. 
 La distribución de los retornos es más simétrica y estable en el tiempo que la distribución de los precios en sí. 
-La estructura de los retornos es cercana a estacionaria, mientras que la estructura de los precios observados en el tiempo no lo es \textbf{(Dacoragna, Et Al, 2001).}
+La estructura de los retornos es cercana a estacionaria, mientras que la estructura de los precios observados en el tiempo no lo es \citep[][pagina 17]{dacoragna}.
 
-El logaritmo de los precios muestra que están normalmente distribuídos, al menos aproximadamente\textbf{ (M.F.M. Osborne, 1959).} En este trabajo de tesis se trabaja con los retornos de los registros diarios individuales de cada serie de tiempo financiera, en otras palabras, la ventana temporal entre cada \guillemotleft tick\guillemotright~ es constante y se le conoce como \textit{lag} la cual se denota como $\delta t$. 
+El logaritmo de los precios muestra que están normalmente distribuídos, al menos aproximadamente \citep[][]{osborne}. En esta Tesis se trabaja con los retornos de los registros diarios individuales de cada serie de tiempo financiera, en otras palabras, la ventana temporal entre cada \guillemotleft tick\guillemotright~ es constante y entonces el \textit{lag} que se se denota como $\delta t$ también tiene la constante de un día. 
 
 
 Los retornos son expresados como:
@@ -79,7 +82,7 @@ Entonces los \textit{retornos logarítmicos} son definidos como:
 $X_t = $ $\mathit{Y_{t}} - $  $\mathit{Y_{t - 1}}$~~.
 \end{center}
 
-Cuya interpretación es la diferencia sucesiva de los logaritmos de los precios  registrados en el tiempo, en otras palabras, la diferencia del logaritmo del precio en turno y su antecesor temporal. Aunque en términos computacionales es mucho más sencillo trabajar con la siguiente expresión que respeta la proposición de Osborne\textbf{ (Frantisek Slanina, 2014): }
+Cuya interpretación es la diferencia sucesiva de los logaritmos de los precios  registrados en el tiempo, en otras palabras, la diferencia del logaritmo del precio en turno y su antecesor temporal. Aunque en términos computacionales es mucho más sencillo trabajar con la siguiente expresión que respeta la proposición de Osborne\citep[][]{slanina}: }
 \begin{center}
 ln $R_t = $ ln $\mathit{P_{t+1}} - $ ln $\mathit{P_{t}}$.
 \end{center}%esto fue sacado de la pagina 132 y 133 del libro essentials of econophysics modeling
@@ -125,16 +128,16 @@ $\varepsilon$ es la energía
 
 $C$ es una constante de normalización
 
-$\mathit{T}$ es la temperatura (Wannier,1966) (Cottrell, Michelson, Wright, Classical Econophysics, pg.149)
+$\mathit{T}$ es la temperatura (Wannier,1966) 
 
 Dada la similitud de un sistema descrito por la Ley de Boltzmann-Gibbs y las condiciones de un sistema económico cerrado, se puede esta ley a una descripción de la \textit{distribución de la probabilidad del dinero}
-(Cottrell, Michelson, Wright, Classical Econophysics, pg.149).
+\citep[][]{cottrell_classical_2009}.
 
 
-\subsubsection{Distribución de la probabilidad del dinero (en equilibrio)} 
+\subsubsection{Distribución de la probabilidad del dinero (en equilibrio)}
 
 
-De acuerdo con Cottrel, Michelson y Wright (Cottrell, Michelson, Wright, Classical Econophysics, pg.149) la distribución de la probabilidad del dinero sigue la forma de la \textit{Ley de Boltzmann-Gibbs}
+De acuerdo con Cottrel, Michelson y Wright \citep[][]{cottrell_classical_2009} la distribución de la probabilidad del dinero sigue la forma de la \textit{Ley de Boltzmann-Gibbs}
 
 
 \begin{center}
@@ -148,7 +151,7 @@ $C$ es una constante de normalización
 
 $\mathit{T}$ es el promedio de la cantidad de dinero por agente en el sistema económico.
 
-Con base en el artículo \textit{Price variations in a stock market with many agents} por Shubik, Pakzuski y Bak en 1997, la ley de la conservación del dinero establece que el dinero no puede ser manufacturado por agentes del sistema económico pero si puede ser transferido entre ellos. Esta descripción es análoga a la que un sistema conservativo presenta en Física, por ejemplo, cuando en un sistema cerrado sin intercambio de energía con el exterior, los átomos colisionan entre sí. 
+Con base en el artículo \textit{Price variations in a stock market with many agents} por Shubik, Pakzuski y Bak en 1997, la ley de la conservación del dinero establece que el dinero no puede ser manufacturado por agentes del sistema económico pero si puede ser transferido entre ellos. Esta descripción es análoga a la que un sistema conservativo presenta en Física, por ejemplo, cuando en un sistema cerrado sin intercambio de energía con el exterior, los átomos colisionan entre sí \citep[][]{shubik}. 
 \newpage
 
 \subsubsection{Ley de la conservación del dinero.} 
@@ -271,7 +274,16 @@ La aplicacion de la entropia de Shannon disminuye la tasa de falsos positivos en
  
 \subsection{La entropia aplicada a la econofisica}
 
-Montoya et al.,
-Martinez et al.,
+Una primera aproximación es considerar la entropía como un cálculo de estructuras complejas. Las estructuras con entropía alta tienen poca informacion que aportar, y las estructuras con baja entropía pueden ser consideradas deterministicas \citep[][]{pincus2004irregularity}.
+
+Un \textit{mercado eficiente} es una estructura con máxima entropia, y entre mas alta es la entropía del mercado mas eficiente es el mercado.
+
+Una segunda aproximación esta dada a partir de la definicion de Boltzmann, su aplicacion en el contexto de econofisica es la medida del numero total de estados economicos accesibles \citep[][]{richmond}.
+
+Una tercera manera es la que se emplea en macroeconomía. La función de utilidad es conocida como función de producción $S_e$, en referencia a que se ha etiquetado a $S$ como la entropia- La primera y segunda leyes de la econofísica se aplican directamente en este contexto, ya que la entropía captura información crucial. Por ejemplo, la funcion de producción $S_e$ se obtiene de la cantidad de personas contratadas en diferentes ocupaciones y cuantas unidades producen \citep[][pagina 170]{richmond}. 
+
+Una cuarta manera de acercarse a este concepto de la manera en que se aborda en esta Tesis es a traves del uso que se le da la entropia como funcion de utilidad en econofisica. El concepto de funcion de utilidad se ha definido en la economia neoclasica. Entonces la entropía se utiliza considerando el numero total de elementos de la caracteristica 1, el numero total de elementos de la caracteristica 2, y asi sucesivamente. En el contexto matemático el estudio de este concepto lleva a estudiar la maximizacion de la funcion de produccion, ello implica estudiar la entropia a traves de un Lagrangiano. En el contexto de la vida diaria, la maximizacion  de la entropia, o bien, la maximizacion de la funcion de utilidad es el numero óptimo de empleados para desarrollar una óptima producción.
+
+Una quinta aplicacion de la entropía en la econofísica es en el estudio del precio especifico que se denota como $\psi$, el cual es el valor por hora del contenido laboral \citep[][]{cottrell_classical_2009}. La distribución de $\psi$ permite que se pueda calcular la ecuación entropia de Shannon. De lo anterior se encuentra que con una desviacion estandar pequeña hay una baja entropia, y cuando la desviación estándar es grande se tiene una entropia grande \citep[][pagina 189]{cottrell_classical_2009}. \textbf{En esta parte hay que insertar la figura de esa pagina 189}.
 
 
