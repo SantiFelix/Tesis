@@ -17,10 +17,10 @@ Sin embargo, a partir del siglo XIX la evolución en la investigación de la eco
 De este modo la economía puede ser estudiada desde el punto de vista de la física estadística.
 
 En este capitulo se presenta al lector los conceptos esenciales para comprender las analogías Física-Economía aplicadas en esta Tesis.
-Se introducirán ciertos conceptos de Economía claves para la compresión de esta Tesis.
+Se introducirán ciertos conceptos clave de Economía para la compresión de esta Tesis.
 Del mismo modo, vamos a presentar los conceptos de mecánica estadística que son aplicados. 
-En este Capitulo se introducirá al lector al estado del arte de la econofísica y sobretodo, la aplicación del concepto de entropía a la economía.
-Finalmente, se presentaran aplicaciones de la econofísica a las finanzas y mercados actuales.
+En este Capítulo se introducirá al lector al estado del arte de la econofísica y sobre todo, la aplicación del concepto de entropía a la economía.
+Finalmente, se presentarán aplicaciones de la econofísica a las finanzas y mercados actuales.
 
 \section{La similitud entre economía y física}
 
@@ -34,7 +34,7 @@ La \textit{mecánica estadísitica} estudiada por los físicos, y la economía, 
 \textit{De la anterior analogía, en una colección de átomos se asume que cada uno de ellos posee una energía cinética $\mathit{\varepsilon}_{i} \geqslant 0 $, mientras que en los mercados financieros cada uno de los agentes participantes tiene un recurso llamado dinero el cual no puede ser negativo, es decir  $\mathit{d}_{i} \geqslant 0 $} \citep[][pagina 149]{cottrell_classical_2009}.
 
 
-En el contexto de la mecanica estadistica se define un ensamble microcanónico como un conjunto  en el que las características y el comportamiento de los componentes son similares, posee entropía máxima y conservación de energía. Gracias a su naturaleza física, es posible estudiarle como un todo.  
+
 
 Adicionalmente, en \textit{Física}, a menudo se dice que un sistema se encuentra en equilibrio cuando la energía con que interactúan los componentes es conservada. 
 
@@ -42,17 +42,17 @@ Adicionalmente, en \textit{Física}, a menudo se dice que un sistema se encuentr
 \subsection{Economía neoclásica} 
 
 En los comienzos de la \textit{Econofísica} se encuentran emblemáticos personajes como Adolphe Quétlet(1796-1874), Léon Walras (1834-1910), Vilfredo Pareto (1848-1923), y Adam Smith (1723-1790), quienes ofrecieron un conjunto de ideas que permitieron ampliar la manera en que se estudia la \textit{Economía}.
-Una de sus mayores contribuciones es considerar una transaccion como una consecuencia determinista del intercambio de bienes entre dos agentes.
-Esta consideracion es innovante con respecto al las corrientes economicas y sociales del siglo XIX (e.g. aspectos sociales,  factores politicos, a distribucipon de la riqueza). 
+Una de sus mayores contribuciones es considerar una transacción como una consecuencia determinista del intercambio de bienes entre dos agentes.
+Esta consideración es innovante con respecto al las corrientes económicas y sociales del siglo XIX (e.g. aspectos sociales,  factores políticos, distribución de la riqueza). 
 
-Esta innovacion permite a la \textit{Econofísica} estudiar los sistemas complejos intrínsecos de la \textit{Economía}. La econofisica entonces considera que sistema complejo esta compuesto de un gran número de \textit{grados de libertad} en diferentes escalas de tiempo  \citep[][pagina 17]{richmond}.
+Esta inovación permite a la \textit{Econofísica} estudiar los sistemas complejos intrínsecos de la \textit{Economía}. La \textit{Econofísica} entonces considera que un sistema complejo esta compuesto de un gran número de \textit{grados de libertad} en diferentes escalas de tiempo  \citep[][pagina 17]{richmond}.
 
-La \textit{Economía neoclásica} puede ser considerafa como la corriente de pensamiento que da lugar a la \textit{Econofísica}. Del mismo modo que Pareto estudió la distribución de la riqueza en el siglo XIX, Adam Smith propuso la descripción de un fenómeno llamado \textit{la mano invisible}. 
-Este y otros conceptos de economia pueden ser consultados en el capitulo \ref{glosario}.
+La \textit{Economía neoclásica} puede ser considerada como la corriente de pensamiento que da lugar a la \textit{Econofísica}. Del mismo modo que Pareto estudió la distribución de la riqueza en el siglo XIX, Adam Smith propuso la descripción de un fenómeno llamado \textit{la mano invisible}. 
+Este y otros conceptos de economía pueden ser consultados en el capítulo \ref{glosario}.
 
 \subsubsection*{Función de utilidad}
 
-Se utiliza para encontrar el numero optimo de diferentes profesionales en una compañia, la mejor eleccion de acciones de un mercado \citep[][]{richmond}. 
+Se utiliza para encontrar el numero óptimo de diferentes profesionales en una compañía, también se utiliza para hallar la mejor elección de acciones de un mercado \citep[][]{richmond}. 
 
 
 \subsection{Retornos} 
@@ -63,7 +63,7 @@ Los retornos son usualmente variables de análisis más rentables que el precio 
 La distribución de los retornos es más simétrica y estable en el tiempo que la distribución de los precios en sí. 
 La estructura de los retornos es cercana a estacionaria, mientras que la estructura de los precios observados en el tiempo no lo es \citep[][pagina 17]{dacoragna}.
 
-El logaritmo de los precios muestra que están normalmente distribuídos, al menos aproximadamente \citep[][]{osborne}. En esta Tesis se trabaja con los retornos de los registros diarios individuales de cada serie de tiempo financiera, en otras palabras, la ventana temporal entre cada \guillemotleft tick\guillemotright~ es constante y entonces el \textit{lag} que se se denota como $\delta t$ también tiene la constante de un día. 
+El logaritmo de los precios muestra que están normalmente distribuídos, al menos aproximadamente \citep[][]{osborne}. En esta Tesis se trabaja con los retornos de los registros diarios individuales de cada serie de tiempo financiera, en otras palabras, la ventana temporal entre cada \guillemotleft tick\guillemotright~ es constante y entonces el \textit{lag} que se se denota como $\delta t$ poseé el valor constante de un día. 
 
 
 Los retornos son expresados como:
@@ -93,26 +93,36 @@ ln $R_t = $ ln $\mathit{P_{t+1}} - $ ln $\mathit{P_{t}}$.
 Podemos citar algunas propiedades de los retornos propuestas por \cite{Cont2001}:
 
 \begin{itemize}
-	\item {Ausencia de auto correlacion: Las autocorrelaciones lineales no son significativas en la mayoria de los casos}
-	\item {Colas largas: La distribucion de retornos parece seguir una ley de potencias.}
+	\item {Ausencia de auto correlación: Las autocorrelaciones lineales no son significativas en la mayoria de los casos}
+	\item {Colas largas: La distribución de retornos parece seguir una ley de potencias.}
 		%the (unconditional) distribution of returns
 		%seems to display a power-law or Pareto-like tail, with
 		%a tail index which is finite, higher than two and less
 		%than five for most data sets studied. }
-	\item Asimetria Ganancia/Perdida: Se observan bajas mas claramente que altas en los precios. 
-	\item Gaussionidad agregada (aggregational gaussianity): cuando se aumenta el intervalo de tiempo en el que se calculan los retorno se observa que el valor de los retornos sigue una distribucion gaussiana. 
+	\item Asimetría Ganancia/Perdida: Se observan bajas más claramente que altas en los precios. 
+	\item Gaussianidad agregada (aggregational gaussianity): cuando se aumenta el intervalo de tiempo en el que se calculan los retornos se observa que el valor de los retornos sigue una distribución gaussiana. 
 	\item Intermitencia: los retornos muestran un gran grado de variabilidad.
-	\item Asimetria en escalas de tiempo: a mayor intervalo de tiempo los retornos muestran volatilidad mas facilmente que cuando el intervalo de tiempo es menor.
+	\item Asimetría en escalas de tiempo: a mayor intervalo de tiempo los retornos muestran volatilidad más fácilmente que cuando el intervalo de tiempo es menor.
 \end{itemize}
 
-Ademas de las propiedades listadas arriba, algunas definiciones de mercado eficiente implican que los retornos no son predecibles. Por ejemplo, Arthur Stalla-Bourdillon de la Banca de Francia en su articulo \textit{Stock Return Predictability: comparing Macro- and Micro-Approaches} \citep{stalla-bourdillon_stock_2022} da el siguiente ejemplo:
+Además de las propiedades listadas arriba, algunas definiciones de mercado eficiente implican que los retornos no son predecibles. Por ejemplo, Arthur Stalla-Bourdillon de la Banca de Francia en su articulo \textit{Stock Return Predictability: comparing Macro- and Micro-Approaches} \citep{stalla-bourdillon_stock_2022} da el siguiente ejemplo:
 \begin{quotation}
-\textit{Dado que toda la informacion esta contenida en los precios del mercado, cambios en el mercado puede solo ser causados por la llegada de nueva informacion, que es por definicion, impredecible. En otras palabras, los precios deben seguir una caminata aleatoria; una regresion de retornos basada en informaicion pasada no debe contener informacion predictiva}.
+\textit{Dado que toda la información está contenida en los precios del mercado, los cambios en el mercado pueden solo ser causados por la llegada de nueva información, que es por definición, es impredecible. En otras palabras, los precios deben seguir una caminata aleatoria; una regresión de retornos basada en información pasada no debe contener información predictiva}.
 \end{quotation}
-La predictividad de los retornos asi como sus propiedades estadisticas son discutidas en profundidad por \cite{Pesaran2010}.
-En su articulo, Pesaran menciona que la predictibilidad de los retornos puede ser asociada a la volatilidad del mercado sugiriendo que la predictividad se incrementa en tiempos de crisis. 
+La predictividad de los retornos así como sus propiedades estadísticas son discutidas en profundidad por \cite{Pesaran2010}.
+En su artículo, Pesaran menciona que la predictibilidad de los retornos puede ser asociada a la volatilidad del mercado sugiriendo que la predictividad se incrementa en tiempos de crisis. 
 
+A continuación se describen las propiedades anteriormente mencionadas con la finalidad de que sean aterrizadas en el contexto de esta Tesis.
 
+La ausencia de auto correlación como indica la primera propiedad se refiere a que los registros de los precios de cada día no producen un objeto de análisis en la mayoría de los casos, aunque dichos registros sean parecidos entre sí.
+
+La tercera propiedad propuesta por \cite{Cont2001} se refiere a que los retornos  permiten identificar aquellos registros en que hubo pérdida en vez de ganancia, en cuyo caso sería un valor negativo para el retorno.
+
+El cuarto punto hace referencia a que si se consideran todos los registros de un mercado los retornos asemejarían una distribución gaussiana.
+
+Con respecto a la quinta propiedad. Los retornos fluctúan entorno a una media pero ello no implica que el valor de los retornos se comporte constante o que muestre una tendencia.
+
+La sexta propiedad propuesta significa entre mayor sea el período de tiempo que conforma a una colección de retornos, menor será la simetría y mayor la volatilidad entre ellos.
 
 \section{Analogías Física-Economía} 
 \subsection{Ley de Boltzmann-Gibbs y distribución de la probabilidad del dinero (en equilibrio)} 
@@ -130,7 +140,7 @@ $C$ es una constante de normalización
 
 $\mathit{T}$ es la temperatura (Wannier,1966) 
 
-Dada la similitud de un sistema descrito por la Ley de Boltzmann-Gibbs y las condiciones de un sistema económico cerrado, se puede esta ley a una descripción de la \textit{distribución de la probabilidad del dinero}
+Dada la similitud de un sistema descrito por la Ley de Boltzmann-Gibbs y las condiciones de un sistema económico cerrado, por analogía se tiene que esta ley es una descripción de la \textit{distribución de la probabilidad del dinero}
 \citep[][]{cottrell_classical_2009}.
 
 
@@ -156,7 +166,7 @@ Con base en el artículo \textit{Price variations in a stock market with many ag
 
 \subsubsection{Ley de la conservación del dinero.} 
 
-En relación con lo establecido por Shubik, Pakzuski y Bak en 1997 en el artículo ya mencionado, lo que compete en este trabajo de tesis es el resultado de la interacción entre los agentes \textit{i} y \textit{j}. 
+En relación con lo establecido por Shubik, Pakzuski y Bak en 1997 en el artículo ya mencionado, lo que compete en este trabajo de Tesis es el resultado de la interacción entre los agentes \textit{i} y \textit{j}. 
 
 Sean \textit{i} y \textit{j} dos agentes que interactúan en el mercado, correspondiéndole a cada uno de ellos una cantidad finita de dinero $d_{i}$ y $d_{j}$ respectivamente, se puede denotar de la siguiente manera: $[d_{i},d_{j}]$. 
 
@@ -184,7 +194,7 @@ como descrito en \citep{Huang2021}.
 %Para mas infor ver \citep{hernandez-montoya_entropy_2022,jakimowicz_role_2020,martinez_alisis_nodate}.
 Existe una formulación conocida por Kelvin-Planck que dice : \textit{No hay proceso termodinámico en estado constante para el cual el calor es completamente convertido en trabajo} \citep[][pagina 86]{struchtrup}.
 
-Sin embargo, la primera derivación de la segunda ley fue dada por Rudolf Clausius (1822-1888) basada en el argumento de que la dirección en que se transfiere el calor esta restringida y depende estrictamente de las declaraciones en ciclos termodinámicos \citep[][pagina 55]{struchtrup}.  Del desarrollo de la segunda ley por Clausius se tiene que \textit{el calor irá del calor al frío por sí mismo, y no al revés} \citep[][pagina 64]{struchtrup}.
+Sin embargo, la primera derivación de la segunda ley fué dada por Rudolf Clausius (1822-1888) basada en el argumento de que la dirección en que se transfiere el calor esta restringida y depende estrictamente de las declaraciones en ciclos termodinámicos \citep[][pagina 55]{struchtrup}.  Del desarrollo de la segunda ley por Clausius se tiene que \textit{el calor irá del calor al frío por sí mismo, y no al revés} \citep[][pagina 64]{struchtrup}.
 
 La segunda ley explica la restricción en la eficiencia y la dirección de los procesos, \textit{el calor no puede ser completamente convertido en trabajo} \citep[][pagina 5]{struchtrup}. 
 
@@ -204,7 +214,28 @@ Por analogía con la sección anterior, se llama a $S$ como $S_e$ que es la entr
 dS_e \geqslant \frac{\delta M}{\lambda}
 \end{equation}
 
-Es preciso mencionar que en Economía $S_e$ se le llama función de producción. En el presente trabajo de tesis no se determina el factor integrante, aunque existen métodos para obtenerlo, en termodinámica se utiliza la constante de Boltzmann debido a enlace entre temperatura y energía \citep[][pagina 166]{richmond}. 
+Es preciso mencionar que en Economía $S_e$ se le llama función de producción. En el presente trabajo de Tesis no se determina el factor integrante, aunque existen métodos para obtenerlo. Aunque no es precisamente análogo dicho factor integrante a la temperatura, vale la pena mencionar que desde el punto de vista de la Física, en termodinámica se utiliza la constante de Boltzmann como enlace entre temperatura y energía \citep[][pagina 166]{richmond}. 
+
+Para terminar de comprender la relación de las variables entre la segunda ley de la termodinámica y la segunda ley de la econofísica se presenta la siguiente tabla. 
+
+\begin{table}	
+	\begin{center}
+		\begin{tabular}{ |l |r | l | c| }
+			\hline
+			Economía &  Unidades & Física & Unidades  \\ \hline
+			M dinero & moneda & Q calor & joules $[J]$ \\
+			K capital & moneda  & E energía & joules $[J]$\\ 
+			P producción &  moneda   & W trabajo & joules $[J]$ \\
+			$\lambda$ fluctuación & moneda & T temperatura & kelvin $[K]$\\ 
+			$S_e$ entropía económica & adimensional & S entropía física & $\frac{J}{K}$ \\
+			$\pi$ presión económica & moneda circulante & P presión & $\frac{N}{[m]^{2}}$\\
+			A libertad de acción & adimensional & V volumen & $[m]^{3}$ \\
+			\hline
+		\end{tabular}
+		\label{tab_analogiasFisEcono}
+		\caption{Variables importantes en sistemas económicos y físicos.}
+	\end{center}
+\end{table}
 
 \subsection{Entropía en la termodinámica y analogía en la econof\'isica} 
 
@@ -214,7 +245,7 @@ La entropía es una cantidad que surge cuando se construye una desigualdad que d
 
 %\subsection{Entropía en la econofísica} 
 
-En el contexto de enofisica, la entropie es la medida de un número total de microestados económicos accesibles o disponibles que pertenecen a un macroestado ( mercado-estado fase "económico"). Aqui la analogía se encuentra en que, la energía mide la probabilidad de que un estado en particular en un espacio fase "económico" sea alcanzado. (pg.200, Richmond, Econophysics) \citep{cottrell_classical_2009}.
+En el contexto de econofísica, la entropía es la medida de un número total de microestados económicos accesibles o disponibles que pertenecen a un macroestado ( mercado-estado fase "económico"). Aqui la analogía se encuentra en que, la energía mide la probabilidad para que un estado en particular en un espacio fase "económico" sea alcanzado. (pg.200, Richmond, Econophysics) \citep{cottrell_classical_2009}.
 
 \subsection{Entropía en la mecánica estadística} 
 
@@ -223,16 +254,16 @@ Es la medida de un número total de microestados económicos accesibles o dispon
 
 \subsection{La ecuación de la entropía}
 
-La ecuacion de Boltzman para la entropia esta definida como:
+La ecuación de Boltzman para la entropía está definida como:
 
 \begin{equation}
 	S = -k_B \int p(\Gamma,t) ln p(\Gamma,t) d\Gamma.
 	\label{entropyB}
 \end{equation}
-En esta ecuacion la entropía $S$ es definida para moléculas en un espacio fase determinado  en un macroestado termodinámico.
-En la ecuacion \ref{entropyB} $k_B$ es la constante de Boltzmann, $ p(\Gamma,t)$ es la función de densidad de probabilidad en el tiempo de $\Gamma$. $\Gamma$ engloba a las variables de posición y momento del espacio fase \citep[][pagina 13]{richmond}. Cabe mencionar que un macroestado esta relacionado con las variables temperatura, presión, volumen.
+En esta ecuación la entropía $S$ es definida para moléculas en un espacio fase determinado  en un macroestado termodinámico.
+En la ecuación \ref{entropyB} $k_B$ es la constante de Boltzmann, $ p(\Gamma,t)$ es la función de densidad de probabilidad en el tiempo de $\Gamma$. $\Gamma$ engloba a las variables de posición y momento del espacio fase \citep[][pagina 13]{richmond}. Cabe mencionar que un macroestado esta relacionado con las variables temperatura, presión y volumen.
  
-Por otro lado, en el estudio de microestados discretos contables y accesibles, la ecuación de la entropia es: 
+Por otro lado, en el estudio de microestados discretos contables y accesibles, la ecuación de la entropía es: 
  
  \begin{equation}
  	S = -k_B \Sigma p_r ln p_r.
@@ -240,8 +271,8 @@ Por otro lado, en el estudio de microestados discretos contables y accesibles, l
 
 Donde $p_r$ es la probabilidad de un microestado. 
 
-Otra definicion de la entropia es dada por la ecuacion de Shannon \ref{entropySha}
-En este trabajo de Tesis se define como la cantidad de perdida y ganancia de información en un conjunto de datos.
+Otra definición de la entropía es dada por la ecuación de Shannon \ref{entropySha}.
+En este trabajo de Tesis se define como la cantidad de pérdida y ganancia de información en un conjunto de datos.
 
 \begin{equation}
 	H = - \sum_{n=1}^{n} p_i log(p_i).
@@ -252,38 +283,85 @@ Donde $p_i$ es la probabilidad del dato en cuestión.
 
 \section{Aplicaciones de la ecuación de Shannon para la entropía.}
 
-Aunque este trabajo de Tesis no está orientado a la inteligencia artificial (AI por sus siglas en ingles), resulta interesante que la AI aplica el concepto de entropía de la información. 
-Por ejemplo \citep{dos2012entropy} utilizan el concepto de entropia para analizar la impureza de una base de datos. 
-Ellos estan interesados en analizar las edades de las personas y los alimentos de su preferencia. 
-Su metodo aplica una reducción en la entropía antes de procesar la base de datos con un arbol de decisiones. 
-Esto les permitió tener una ganancia de información\citep[][]{dos2012entropy}. 
-Al hacer una clasificación y etiquetar, obtuvieron los resultados que habían planteado en su hipotesis.
+Aunque este trabajo de Tesis no está orientado a la inteligencia artificial (AI por sus siglas en inglés), resulta interesante que la AI aplica el concepto de entropía de la información. 
+Por ejemplo en el portal tds (towards data science) \citep[][]{tds} en la publicación \textit{Entropy and Information Gain in Decision Trees} se utiliza el concepto de entropía para analizar la impureza de una base de datos. 
+Su interés ha sido analizar las edades de las personas y los alimentos de su preferencia. 
+Su método aplica una reducción en la entropía antes de procesar la base de datos con un árbol de decisiones. 
+Esto permitió tener una ganancia de información\citep[][]{tds}, y de dicha ganancia de información se obtiene si la persona que entrevistan respecto a sus preferencias por diferentes alimentos es o no es del medio oeste de los Estados Unidos. Su objetivo era mostrar que mediante la aplicación del método de la ganancia de entropía a los árboles de decisiones se puede llegar a la homogeneidad de los datos, en cuyo caso la entropía sería cero
 
-En este punto resulta interesante comprender el alcance que tiene la ecuacion de Shanon, no solamente en la termodinámica. 
-Por ejemplo, en la publicación \textit{Entropy Calculation, Information Gain and Decision Tree Learning} del sitio web medium \citep[][]{medium} aplican la entropia para mejorar el modelo de arboles de decisiones.
-En inteligencia artificial un arbol de decisiones es frecuentemente utilizado como clasificador de bases de datos.
-Calcular la entropia permite tomar los atributos mas importantes de la base de datos para la creacion de un arbol de decisiones asi como medir la homogeneidad de los datos. 
-Por consecuencia, puede ayudar a determinar la calidad del arbol de decisiones. 
+En este punto resulta interesante comprender el alcance que tiene la ecuacion de Shannon, no solamente en la termodinámica. 
+Otro ejemplo es presentado en la publicación \textit{Entropy Calculation, Information Gain and Decision Tree Learning} del sitio web medium \citep[][]{medium} , donde se utiliza el concepto de la homogeneidad y no homogeneidad de la información para mejorar el modelo de árboles de decisiones. Se 
+menciona que la impureza de la información será cero si todos los registros son de una misma clase, y si se dividiera en dos clases y hay exactamente la misma cantidad de registros para cada una de las clases, entonces se tendría una impureza del 100 porciento o una colección completamente no homogénea de registros. 
+En inteligencia artificial un árbol de decisiones es frecuentemente utilizado como clasificador de bases de datos.
+Calcular la entropía permite tomar los atributos más importantes de la base de datos para conformar un árbol de decisiones, así como medir la homogeneidad de los datos. 
+Por consecuencia, puede ayudar a determinar la calidad del árbol de decisiones. 
 
-En otra publicación hecha en el portal tds (towards data science) \citep[][]{tds}, se utiliza el mismo concepto de un árbol de decisiones.
-En este caso se tiene como objetivo que el algoritmo de inteligencia artificial determine el impacto de un atributo con respecto otro basado en la cantidad de información que presentan/
+En otra publicación \citep{dos2012entropy}  , se utiliza el mismo concepto de un árbol de decisiones. 
+En este caso se tiene como objetivo que el algoritmo de inteligencia artificial determine el impacto de un atributo con respecto otro basado en la cantidad de información que presentan para así clasificar tareas. 
 
 La ecuación de la entropía de Shannon no solamente se aplica para árboles de decisión, también se ha utilizado para mostrar que algunos textos poseen más riqueza en su contenido con respecto a un tema. 
-Además se menciona que en comparación con las técnicas tradicionales del aprendizaje-máquina.
-La aplicacion de la entropia de Shannon disminuye la tasa de falsos positivos en relación con las palabras clave que se refieren a un tema en particular \citep[][]{chan2022knowledge}.   
+Además se menciona que en comparación con las técnicas tradicionales del aprendizaje-máquina la aplicación de la entropía de Shannon disminuye la tasa de falsos positivos en relación con las palabras clave que se refieren a un tema en particular \citep[][]{chan2022knowledge}.   
  
-\subsection{La entropia aplicada a la econofisica}
+\subsection{La entropía aplicada a la econofísica}
 
-Una primera aproximación es considerar la entropía como un cálculo de estructuras complejas. Las estructuras con entropía alta tienen poca informacion que aportar, y las estructuras con baja entropía pueden ser consideradas deterministicas \citep[][]{pincus2004irregularity}.
+Una primera aproximación es considerar la entropía como un cálculo de estructuras complejas. Las estructuras con entropía alta tienen poca información que aportar, y las estructuras con baja entropía pueden ser consideradas determinísticas \citep[][]{pincus2004irregularity}.
 
-Un \textit{mercado eficiente} es una estructura con máxima entropia, y entre mas alta es la entropía del mercado mas eficiente es el mercado.
+Un \textit{mercado eficiente} es una estructura con máxima entropía, y entre más alta es la entropía del mercado más eficiente es el mercado.
 
-Una segunda aproximación esta dada a partir de la definicion de Boltzmann, su aplicacion en el contexto de econofisica es la medida del numero total de estados economicos accesibles \citep[][]{richmond}.
+Una segunda aproximación esta dada a partir de la definición de Boltzmann, su aplicación en el contexto de econófisica es la medida del número total de estados económicos accesibles \citep[][]{richmond}. Es decir, la oportunidad temporal que poseen los agentes para interactuar en el mercado.
 
-Una tercera manera es la que se emplea en macroeconomía. La función de utilidad es conocida como función de producción $S_e$, en referencia a que se ha etiquetado a $S$ como la entropia- La primera y segunda leyes de la econofísica se aplican directamente en este contexto, ya que la entropía captura información crucial. Por ejemplo, la funcion de producción $S_e$ se obtiene de la cantidad de personas contratadas en diferentes ocupaciones y cuantas unidades producen \citep[][pagina 170]{richmond}. 
+Una tercera manera es la que se emplea en macroeconomía. La función de utilidad es conocida como función de producción $S_e$, en referencia a que se ha etiquetado a $S$ como la entropía. 
 
-Una cuarta manera de acercarse a este concepto de la manera en que se aborda en esta Tesis es a traves del uso que se le da la entropia como funcion de utilidad en econofisica. El concepto de funcion de utilidad se ha definido en la economia neoclasica. Entonces la entropía se utiliza considerando el numero total de elementos de la caracteristica 1, el numero total de elementos de la caracteristica 2, y asi sucesivamente. En el contexto matemático el estudio de este concepto lleva a estudiar la maximizacion de la funcion de produccion, ello implica estudiar la entropia a traves de un Lagrangiano. En el contexto de la vida diaria, la maximizacion  de la entropia, o bien, la maximizacion de la funcion de utilidad es el numero óptimo de empleados para desarrollar una óptima producción.
+La primera y segunda leyes de la econofísica se aplican directamente en este contexto, ya que la entropía captura información crucial. Por ejemplo, la función de producción $S_e$ se obtiene de la cantidad de personas contratadas en diferentes ocupaciones y cuantas unidades producen \citep[][pagina 170]{richmond}. 
 
-Una quinta aplicacion de la entropía en la econofísica es en el estudio del precio especifico que se denota como $\psi$, el cual es el valor por hora del contenido laboral \citep[][]{cottrell_classical_2009}. La distribución de $\psi$ permite que se pueda calcular la ecuación entropia de Shannon. De lo anterior se encuentra que con una desviacion estandar pequeña hay una baja entropia, y cuando la desviación estándar es grande se tiene una entropia grande \citep[][pagina 189]{cottrell_classical_2009}. \textbf{En esta parte hay que insertar la figura de esa pagina 189}.
+Una cuarta manera de acercarse a este concepto de la manera en que se aborda en esta Tesis es a través del uso que se le da la entropía como función de utilidad en econofísica. El concepto de función de utilidad se ha definido en la Economía neoclásica. Entonces en el contexto de la Economía neoclásica la entropía se obtiene considerando el número total de elementos que pertenecen a la colección número uno, el número total de elementos pertenecientes a la colección número dos, y así sucesivamente. 
 
 
+Dentro de esta misma aproximación y en el contexto matemático, se interpreta a la maximización de la función de producción lo que implica estudiar la entropía a través de un Lagrangiano \citep[][página 205]{richmond} \citep[][página 150]{cottrell_classical_2009}.
+
+De igual manera, un acercamiento a este concepto en la vida cotidiana se encuentra en la maximización  de la entropía, o bien, la maximización de la función de utilidad es el numero óptimo de empleados para desarrollar una óptima producción.
+
+De este cuarto punto de vista se concluye que la entropía vista desde la Economía es una función de producción. 
+
+Una quinta aplicación de la entropía en la econofísica es en el estudio del precio específico que se denota como $\psi$, el cual es el valor por hora del contenido laboral \citep[][]{cottrell_classical_2009}. La distribución de $\psi$ permite que se pueda calcular la ecuación entropía de Shannon. De lo anterior se encuentra que con una desviación estándar pequeña hay una baja entropía, y cuando la desviación estándar es grande se tiene una entropía grande \citep[][pagina 189]{cottrell_classical_2009}. \textbf{En esta parte hay que insertar la figura de esa pagina 189}.
+
+Adicionalmente, Richmond muestra una serie de ejemplos en los que la entropía se estudia en situaciones estrechamente aplicadas a la economía. En su explicación muestra una analogía con el ciclo de Carnot. \textbf{En esta parte hay que añadir el diagrama de la página 205 o 189 del libro de Richmond econophysics}. 
+
+
+En el diagrama $C$ se refiere al costo, $\Delta M$ significa la ganancia en el proceso de producción,  \textit{Y} significa los ingresos, $\lambda$ es el estándar de vida, aunque es más apropiado interpretarlo como el \textbf{dinero} que poseé un agente en un punto en particular, donde $\lambda_{1}$ es dinero con que se compra mientras que $\lambda_{2}$ es el dinero de venta, y $S_e$ es la entropía desde el punto de vista de la economía por lo que también se le puede denominar como función de producción.
+
+Entonces una sexta aplicación de la entropía es el de los granjeros en el mercado tal como se muestra en la siguiente tabla (ver tabla \ref{tab:tab_manzanas}). Cabe mencionar que la flecha $\rightarrow
+$ indica \textit{se convierte en}.  
+
+De la misma manera Richmond explica que la entropía también se puede estudiar en ciclos monetarios. Así una séptima manera de estudiar la entropía es la descrita en la tabla (ver tabla ). 
+
+\begin{table}	
+\hskip-4.0cm\begin{tabular}{ |l |r | l | c| }
+		\hline
+		Punto en el ciclo &  Acción & Entropía & Dinero  \\ \hline
+		1 $\rightarrow$ 2 & Manzanas recolectadas en una plantación al costo más bajo & $\Delta S_{e} < 0 $ &  $\lambda_{1}$ \\ \hline
+		2 $\rightarrow$ 3 & Manzanas traídas de la plantación al mercado  & $\Delta S_{e} = 0 $ & $\lambda_{1} \rightarrow \lambda_{2}$\\ \hline
+		3 $\rightarrow$ 4 &  Manzanas distribuídas a consumidores a alto precio   &$\Delta S_{e} > 0 $ & $\lambda_{2}$ \\  \hline
+		4 $\rightarrow$ 1 & Fertilizantes a partir de residuos son llevados al campo &  $\Delta S_{e} = 0 $  &  $\lambda_{2} \rightarrow \lambda_{1}$\\  
+
+		\hline
+	\end{tabular}
+	\label{tab:tab_manzanas}
+	\caption{Manzanas producidas en una granja a precio $\lambda_{1}$ y vendidas al mercados en $\lambda_{2}$. }
+\end{table}
+
+
+\begin{table}	
+	\hskip-4.0cm\begin{tabular}{ |l |r | l | c| }
+		\hline
+		Punto en el ciclo &  Acción & Entropía & Dinero  \\ \hline
+		4 $\rightarrow$ 3 & Agricultor obtiene dinero de clientes que compran a precio alto & $\Delta S_{e} < 0 $ &  $\lambda_{2}$ \\ \hline
+		3 $\rightarrow$ 2 & Manzanas traídas de la plantación al mercado  & $\Delta S_{e} = 0 $ & $\lambda_{1} \rightarrow \lambda_{2}$\\ \hline
+		3 $\rightarrow$ 4 &  Manzanas distribuídas a consumidores a alto precio   &$\Delta S_{e} > 0 $ & $\lambda_{2}$ \\  \hline
+		4 $\rightarrow$ 1 & Fertilizantes a partir de residuos son llevados al campo &  $\Delta S_{e} = 0 $  &  $\lambda_{2} \rightarrow \lambda_{1}$\\  
+		
+		\hline
+	\end{tabular}
+	\label{tab:tab_dineroManzana}
+	\caption{Manzanas producidas en una granja a precio $\lambda_{1}$ y vendidas al mercados en $\lambda_{2}$. }
+\end{table}
