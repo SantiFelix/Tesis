@@ -1,9 +1,12 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Bak {et~al.}(1997)Bak, Paczuski, \& Shubik}]{shubik}
 Bak, P., Paczuski, M., \& Shubik, M. 1997, Physica A: Statistical Mechanics and
   its Applications, 246, 430
+
+\bibitem[{Bouchaud \& Cont(1998)}]{Boucha}
+Bouchaud, J.-P. \& Cont, R. 1998, Physics of Condensed Matter, 6, 543
 
 \bibitem[{Chan(2022)}]{chan2022knowledge}
 Chan, A.~P. 2022, arXiv preprint arXiv:2206.02363
