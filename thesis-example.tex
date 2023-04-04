@@ -9,7 +9,6 @@
 	chapterprefix=true,			% prefix for chapter marks
 	11pt,					% font size
 	headings=normal,			% size of headings
-	bibliography=totoc,			% include bib in toc
 	listof=totoc,				% include listof entries in toc
 	titlepage=on,				% own page for each title page
 	captions=tableabove,		% display table captions above the float env
@@ -21,6 +20,7 @@
 % Load and Configure Packages
 % **************************************************
 \usepackage{graphicx}
+\usepackage{titlesec}
 \graphicspath{{gfx/}}
 \usepackage{stmaryrd,amssymb,amsmath}
 \usepackage{physics}
@@ -36,10 +36,11 @@ hangsection=true,%
 hangsubsection=true,%
 colorize=full,%
 colortheme=bluemagenta,%
-bibsys=bibtex,%
-bibfile=bib-refs,%
 bibstyle=alphabetic,%
 ]{cleanthesis}
+
+\usepackage[round]{natbib}
+
 % **************************************************
 % Debug LaTeX Information
 % **************************************************
@@ -84,9 +85,6 @@ bibstyle=alphabetic,%
 	bookmarksopen=true			%
 }
 
-\SetKwIF{If}{ElseIf}{Else}{Si}{Entonces}{Sino, Si}{De lo contrario}{Fin-Si}
-\SetKwFor{For}{Para}{Hacer}{Fin-Para}
-\SetKw{KwTo}{Hasta}
 
 % **************************************************
 % Document CONTENT
@@ -98,8 +96,8 @@ bibstyle=alphabetic,%
 % --------------------------
 %\renewcaptionname{ngerman}{\figurename}{Abb.}
 %\renewcaptionname{ngerman}{\tablename}{Tab.}
-\renewcaptionname{spanish}{\figurename}{Fig.}
-\renewcaptionname{spanish}{\tablename}{Tab.}
+\renewcaptionname{spanish}{\figurename}{Figure}
+\renewcaptionname{spanish}{\tablename}{Tabla}
 
 % --------------------------
 % Front matter
@@ -134,23 +132,18 @@ bibstyle=alphabetic,%
 \input{content/contexto_teorico} % contexto teorico
 \input{content/metodologia}	% 
 \input{content/resultados}	
-\input{content/glosario} % INCLUDE: concepts
 \input{content/chapter-conclusion} % INCLUDE: conclusion
+\input{content/glosario} % INCLUDE: concepts
+
+
+
 \cleardoublepage
 
 % --------------------------
 % Back matter
 % --------------------------
-{%
-\setstretch{1.1}
-\renewcommand{\bibfont}{\normalfont\small}
-\setlength{\biblabelsep}{0pt}
-\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
 
-\printbibliography[nottype=online]
-\printbibliography[heading=subbibliography,title={Webseiten},type=online,prefixnumbers={@}]
-}
-\cleardoublepage
+
 
 \listoffigures
 \cleardoublepage
@@ -158,17 +151,34 @@ bibstyle=alphabetic,%
 \listoftables
 \cleardoublepage
 
-\input{content/colophon}
-\cleardoublepage
 
-\input{content/declaration}
-\clearpage
-\newpage
+
+
+
 %\bibliography{refs}{}
 %\bibliographystyle{plain}
 
-\mbox{}
 
+
+
+\label{Bibliography}
+
+%\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+
+%\bibliographystyle{plainnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+%\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+\bibliographystyle{aa.bst}
+%\nocite{*}
+%\bibliography{biblio,biblio4,biblio2,biblio3}
+% bibtool -s -d -x main.aux biblio.bib biblio2.bib biblio3.bib biblio4.bib> biblioall2.bib
+
+% bibtool -s -d -x main.aux ep.bib Planck_bib.bib biblioall.bib bibliography.bib> biblioall2.bib
+
+
+
+\bibliography{biblio.bib}
 % **************************************************
 % End of Document CONTENT
 % **************************************************
