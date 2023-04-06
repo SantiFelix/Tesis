@@ -49,36 +49,136 @@ precios=importdata('/Users/Manzanita/Tesis_felix/Tesis/Code/ficheroscsv/precios.
 
 
 %% return and entropy calculation NO MAV
+window_entropy=50;   %window to calculate entropy shanon
+nq = 3; %default for havin quartile, change to have n+1 quantile
+
 pricevalues=(str2double(precios(:,1)));
 
 ret1=pricevalues(2:end) ./ pricevalues(1:end-1) -1;
-entropy=calc_entropy(window_entropy,ret1);
+entropy=calc_entropy(window_entropy,ret1,nq);
 
-%% Calculate moving mean and entropy
+%% Calculate MAV moving mean and entropy
 
 window=1;   %sliding window size for moving average
+window_entropy=20;   %window to calculate entropy shanon
+nq = 23; %default for havin quartile, change to have n+1 quantile
+
+[entropyMAV] = calc_entropyMAV(precios, window, window_entropy, nq);
+
+%calculate similarities
+
+%% calculate mahalanobis distance for min entropy
+dmahal=mahal(entropyMAV',entropyMAV');
+t = 1:numel(dmahal);               
+[threshold_entropy, min_entropyMAV,min_entropyMAV_l] = SNR_entropy(entropyMAV);
+figure
+plot(dmahal)
+hold on
+plot(t(min_entropyMAV_l), dmahal(min_entropyMAV_l),'x')
+ylabel('SNR'); xlabel('value');
+title(['SNR ', string(window(i)), 'NQ ',string(nq(i)) ]);
+
+figure
+hold on
+plot(entropyMAV)
+plot(t(min_entropyMAV_l), entropyMAV(min_entropyMAV_l),'x')
+[n_minE]=check_intervals(min_entropyMAV);
+ylabel('Entropy'); xlabel('value');
+title(['Entropy ', string(window(i)), 'NQ ',string(nq(i)) ]);
+
+%% Calculate nunmber of MIN entropy with different MAV sizes
 window_entropy=50;   %window to calculate entropy shanon
 q=0.1;  %percentil to consider a minimum entropy
-nq = 3; %default for havin quartile, change to have n+1 quantile
-% Calculate similitud between MAV and no MAV entropy
+nq = 19;
+
 win_similarity=[];
 i=1;
 for window=5:5:100
-    [entropyMAV, similarity] = entropy_comparisons(precios,entropy, window, window_entropy, q, nq);
-    win_similarity(i)=similarity;
+    [entropyMAV] = calc_entropyMAV(precios, window, window_entropy, nq);
+    [threshold_entropy, min_entropyMAV] = mahal_min_entropy(entropyMAV);
+    [n_minE]=check_intervals(min_entropyMAV, entropyMAV, window);
+    win_similarity(i)=n_minE;
     i=i+1;
 end
-%% Calculate similitud between diferent quantile size entropy
+
+%% Calculate similarity between diferent quantile size entropy
 q_similarity=[];
 window=1;   %sliding window size for moving average
 i=1;
-for nq=3:1:40
-    [entropyMAV, similarity] = entropy_comparisons(precios,entropy, window, window_entropy, q, nq);
-    q_similarity(i)=similarity;
+for nq=3:2:40
+    entropy=calc_entropy(window_entropy,ret1,nq);
+    [entropyMAV] = calc_entropyMAV(precios, window, window_entropy, nq);
+    [threshold_entropy, min_entropyMAV] = mahal_min_entropy(entropyMAV);
+    [n_minE]=check_intervals(min_entropyMAV);
+    q_similarity(i)=n_minE;
     i=i+1;
 end
 
 
+%% Calculate nq, MAV and windowS
+figdir = [topdir,'figures_matlab/'];
+hypermatrix=[];
+hypermatrix_snr=[];
+k = 1;
+SNR_level=5;
+for window_entropy = 10:10:150
+    j = 1;
+    for nq = 3:10:150
+        i=1;
+        for window=[1, 10, 50, 100]
+            [entropyMAV] = calc_entropyMAV(precios, window, window_entropy, nq);
+            [min_entropyMAV,min_entropyMAV_l,max_snr] = SNR_entropy(entropyMAV,SNR_level);
+            [n_minE]=check_intervals(min_entropyMAV);
+            dmahal=mahal(entropyMAV',entropyMAV');
+            t = 1:numel(dmahal); 
+            hypermatrix(i, j, k)=n_minE;
+            hypermatrix_snr(i, j, k)=max_snr;
+%figure
+% plot(dmahal)
+% hold on
+% plot(t(min_entropyMAV_l), dmahal(min_entropyMAV_l),'x')
+% ylabel('SNR'); xlabel('value');
+% title(['SNR with window ', num2str(window), '  NQ ',num2str(nq), '  entropyW ',num2str(window_entropy)]);
+% filename=[figdir,'SNR_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.pdf'];
+% saveas(gca,filename,'pdf');
+% filename=[figdir,'SNR_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.jpg'];
+% saveas(gca,filename,'jpg');
+% 
+% figure
+% hold on
+% plot(entropyMAV)
+% plot(t(min_entropyMAV_l), entropyMAV(min_entropyMAV_l),'x')
+% [n_minE]=check_intervals(min_entropyMAV);
+% ylabel('Entropy'); xlabel('value');
+% title(['Entropy with window ', num2str(window), '  NQ ',num2str(nq), '  entropyW ',num2str(window_entropy)]);
+% filename=[figdir,'Entropy_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.pdf'];
+% saveas(gca,filename,'pdf');
+% filename=[figdir,'Entropy_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.jpg'];
+% saveas(gca,filename,'jpg');
+% close all
+%             
+            i=i+1;
+        end
+        j=j+1;
+    end
+    k = k+1;
+end
+
+%%
+figure
+hold on
+window_entropy = 10:10:150;
+nq = 3:10:150;
+window=[1, 10, 50, 100];
+% (window, nq, window_entropy)
+for i = 1:4
+subplot(1,4,i)
+imagesc(window_entropy,nq,reshape(hypermatrix_snr(i,:,:),[15 15]))
+ylabel('nq'); xlabel('W entropy ');
+title(['W return', string(window(i))]);
+
+end
+hold off
 
 %%  add dates
 MAVpricedated=[MAVprice(:),precios(:,2)];

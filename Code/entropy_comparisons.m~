@@ -1,0 +1,44 @@
+function [n_intersection] = entropy_comparisons(entropy, entropyMAV, q)
+%calculate moving means
+
+%% Calculate quartile and entropy
+
+min_entropyMAV=zeros(size(entropy));
+min_entropyMAV(entropyMAV<quantile(entropyMAV, q))=1;
+
+[threshold_entropy, min_entropyMAV] = mahal_min_entropy(entropyMAV);
+
+min_entropy=zeros(size(entropyMAV));
+min_entropy(entropy<quantile(entropy, q))=1;
+
+[threshold_entropy, min_entropy] = mahal_min_entropy(entropy);
+
+%similarity=sum(abs(min_entropy-min_entropyMAV));
+%calculates the number of intersection betwen two entropies
+interval_sim=min_entropy+min_entropyMAV;
+[n_intersection]=check_intervals(interval_sim);
+
+
+% calculates the number of entropies detected
+min_entropyMAV(entropyMAV<quantile(entropyMAV, q))=2;
+[n_intersection]=check_intervals(min_entropyMAV);
+
+end
+
+function [n_intersection]=check_intervals(interval_sim)
+debut=[];
+fin=[];
+j=0;
+k=0;
+for i=1:length(interval_sim)-1
+    if interval_sim(i)==2 & interval_sim(i+1)~=2
+       j=j+1;
+       fin(j)=i;
+    end
+    if interval_sim(i)~=2 & interval_sim(i+1)==2
+       k=k+1;
+       debut(k)=i+1;
+    end
+end
+n_intersection=j;
+end
