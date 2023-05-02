@@ -38,7 +38,9 @@ Los algoritmos presentados en esta Tesis fueron desarrollados en el lenguage de 
 Los precios de los mercados utilizados en esta Tesis fueron obtenidos del portal Yahoo Finance. 
 Cabe mencionar que los precios son registrados cada 24 horas excepto los días sábado y domingo. También es importante mencionar que un año en el mercado de valores generalmente incluye 252 días, esto debido a que se presentan días en que se conmemora algo importante como lo es el día de año nuevo, el día de Martin Luther King, el día de la independencia, entre otros. 
 
-Se descargaron las datos de precios entre DD/MM/YYYY y DD/MM/YYYY de los mercados Dow Jones Industrial Average (DWJ), Índice BMV IPC (IPC), \textit{Deutscher Aktienindex} (DAX), y la bolsa de valores de Tokio Nikkei 225 (Nikkei).
+Se descargaron las datos de precios entre el 8 de noviembre 1991 y 6 de junio de 2017 para el mercado Dow Jones Industrial Average (DWJ), 8 de noviembre 1991 y 30 de junio de 2017.
+%
+%para el mercado Índice BMV IPC (IPC), 8 de noviembre 1991 y 21 de abril de 2017  para el mercado Deutscher Aktienindex (DAX) y 10 de noviembre de 1991 al 7 de junio de 2017 para bolsa de valores de Tokio Nikkei 225 (Nikkei).
 
 Un ejemplo de la base de datos de precios descargada se presenta en la tabla \ref{ejemplo_data}.
 \begin{table}[]
@@ -61,35 +63,20 @@ Un ejemplo de la base de datos de precios descargada se presenta en la tabla \re
 		Ju 28-Nov-1991 & 1588.2  \\ \hline
 		Vi 29-Nov-1991 & 1566.6  \\ \hline
 	\end{tabular}
-\label{fechasdatabase1}
+\label{ejemplo_data}
 \caption{Primeras 15 fechas de la base de datos correspondiente a Dow Jones.}
 \end{table}
 
 Las columnas de la base de datos corresponden a la fecha en la que se realizó el registro de precio respectivo.
 Las bases de datos de cada uno de los mercados fueron depuradas y ordenadas. Esta depuración corresponde a identificar y eliminar las fechas en las que no hay precio registrado para evitar errores de cálculo.
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|c|c|}
-	\hline 
-	Fecha & precio \\ 
-	\hline 
-	DD/MM/YYYY & $$$$ \\ 
-	DD/MM/YYYY & $$$$ \\ 
-	DD/MM/YYYY & $$$$ \\ 
-	\hline 
-\end{tabular} 
-	\label{ejemplo_data}
-	\caption{Ejemplo de base de datos de mercados financieros.}
-\end{center}
-\end{table}
 
 \subsection{Cálculo de retornos de precios de mercados}
 \label{sec_retornos}
 Luego que se han cargado los datos, y se han ordenado es necesario calcular los retornos de los precios. 
 %y ello conlleva a que no va a haber una media central en los datos. 
 Los retornos permiten analizar fácilmente la tasa de cambio en el tiempo.
-En esta Tesis se eligió trabajar con los retornos de los precios y no con los precios directamente debido a las propiedades de los retornos presentadas en la subseccion \ref{retornos}.
+En esta Tesis se eligió trabajar con los retornos de los precios y no con los precios directamente debido a las propiedades de los retornos presentadas en la Subseccion \ref{retornos}.
 Aunque los retornos son una mejor representación de los precios, aún presentan picos que sobresalen de la media. 
 %La estandarización permite destacar los retornos que realmente son relevantes. 
 %%%-----NO SE APLICO ESTANDARIZACION NO ?????
@@ -122,9 +109,21 @@ De este modo, la Tabla \ref{ejemplo_data-returns} muestra un ejemplo de etiqueta
 		\hline 
 		Fecha & retorno & cuartil \\ 
 		\hline 
-		DD/MM/YYYY & $$$$ & 1\\ 
-		DD/MM/YYYY & $$$$ & 2\\ 
-		DD/MM/YYYY & $$$$ & 4\\ 
+08-Nov-91	&	~0.001743276	&	3	\\
+11-Nov-91	&	~0.007582318	&	4	\\
+12-Nov-91	&	~0.001233654	&	3	\\
+13-Nov-91	&	-0.001355317	&	3	\\
+14-Nov-91	&	~0.005181999	&	4	\\
+15-Nov-91	&	-0.01074015	&	1	\\
+18-Nov-91	&	-0.007940964	&	2	\\
+19-Nov-91	&	-0.000625352	&	3	\\
+21-Nov-91	&	~0.001376679	&	3	\\
+22-Nov-91	&	-0.006936262	&	2	\\
+25-Nov-91	&	~0.008620734	&	4	\\
+26-Nov-91	&	-0.01041866	&	1	\\
+27-Nov-91	&	0.001260875	&	3	\\
+28-Nov-91	&	-0.013600284	&	1	\\
+29-Nov-91	&	-0.013532465	&	1	\\
 		\hline 
 	\end{tabular} 
 	\label{ejemplo_data-returns}
@@ -148,9 +147,21 @@ La ventana deslizante aplicada para el cálculo de entropía en este ejemplo es 
 		\hline 
 		Fecha & retorno & entropia \\ 
 		\hline 
-		DD/MM/YYYY & $$$$ & N entropia\\ 
-		DD/MM/YYYY & $$$$ & N entropia\\ 
-		DD/MM/YYYY & $$$$ & N entropia\\ 
+08-Nov-91	&	~0.001743276	&	1.533867597	\\
+11-Nov-91	&	~0.007582318	&	1.535407579	\\
+12-Nov-91	&	~0.001233654	&	1.533867597	\\
+13-Nov-91	&	-0.001355317	&	1.529229225	\\
+14-Nov-91	&	~0.005181999	&	1.533867597	\\
+15-Nov-91	&	-0.01074015	&	1.515885722	\\
+18-Nov-91	&	-0.007940964	&	1.514455934	\\
+19-Nov-91	&	-0.000625352	&	1.51124735	\\
+21-Nov-91	&	~0.001376679	&	1.51124735	\\
+22-Nov-91	&	-0.006936262	&	1.51124735	\\
+25-Nov-91	&	~0.008620734	&	1.515885722	\\
+26-Nov-91	&	-0.01041866	&	1.492446957	\\
+27-Nov-91	&	~0.001260875	&	1.492446957	\\
+28-Nov-91	&	-0.013600284	&	1.462620438	\\
+29-Nov-91	&	-0.013532465	&	1.430302051	\\
 		\hline 
 	\end{tabular} 
 	\label{entropytable}
@@ -163,31 +174,12 @@ La ventana deslizante aplicada para el cálculo de entropía en este ejemplo es 
 
 \section{Cálculo de entropía con retornos de medias móviles}
 \label{metodo_MAV}
-El método explicado en la sección anterior ahora es estudiado con una modificación en el cálculo de retornos.
-Dicha modificación consiste en el cálculo de la media del precio sobre una ventana deslizante de tiempo $\Delta t_{MAV})$(i.e., media móvil) (ver Figura \ref{entropiamav}). 
-El intervalo de la ventana deslizante impacta directamente la curva de precios.
-De este modo se observa que una ventana deslizante grande (e.g. 50 dias) ver Figura \ref{mav50Entropy10nq23} tiene un efecto de suavizado de la curva mas claro que una ventana corta (e.g., 10 dias) ver Figura \ref{mav10Entropy10nq23} lo que permite observar una diferente cantidad diferente de picos en los valores mínimos de entropía en ambos casos. 
-
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures_matlab/Entropy_window_10_NQ_23_entropyW_10}
-	\caption{Valores de entropía con filtro de media móvil de 10 días y agrupación de 10 en 10 para la entropía de Shannon en el caso de 23 cuantiles el mercado DJJA.}
-	\label{mav10Entropy10nq23}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figures_matlab/Entropy_window_50_NQ_23_entropyW_10}
-	\caption{Valores de entropía con filtro de media móvil de 50 días y agrupación de 10 en 10 para la entropía de Shannon en el caso de 23 cuantiles el mercado DJJA.}
-	\label{mav50Entropy10nq23}
-\end{figure}
-
+El método explicado en la sección anterior ahora es estudiado con una modificación en el cálculo de retornos como se muestra en el diagrama \ref{entropiamav}.
+Dicha modificación consiste en el cálculo de la media del precio sobre una ventana deslizante de tiempo $\Delta t_{MAV})$(i.e., media móvil) 
 
 Una vez que las medias móviles de precio son calculadas, se calculan los retornos tal como en la Ecuacion \ref{retornos}.
 Después se aplica el método descrito en la Sección \ref{sec_entropia} para calcular la entropía.
-Las observaciones así como conclusiones respecto a la aplicación de medias móviles serán discutidas en profundidad en la sección \ref{Conclusiones}.
+Las observaciones así como conclusiones respecto a la aplicación de medias móviles serán discutidas en profundidad en la Sección \ref{Resultados} y \ref{Conclusiones}.
 
 
 \begin{figure}
@@ -212,7 +204,7 @@ En la segunda se aplica el proceso de medias móviles como se presenta en \ref{e
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\linewidth]{figures/simulacion}
-	\caption{Diagrama del algoritmo de calculo de entropia para la simulacion de mercado eficiente. }
+	\caption{Diagrama del algoritmo de calculo de entropía para la simulación de mercado eficiente. }
 	\label{simulacion}
 \end{figure}
 
@@ -265,8 +257,17 @@ Un valor muy grande de $Q$ puede diluir los mínimos de entropía (debido a que 
 
 Para mejorar el cálculo de la entropía se realizó una evaluación de los valores de $\Delta t_{MAV})$, $\Delta t_{ent})$ y $Q$.
 Esta evaluación busca maximizar el número de mínimas entropías detectadas.
-Esta maximización se basa en el ajuste de las distribuciones de probabilidad listadas en la Sección \ref{ajuste}.
+Esta maximización se realiza basada en la señal a ruido medida a medida de la curva de entropía.
+La señal a ruido de la curva de entropía se calcula de acuerdo a la ecuacion siguiente:
+ \begin{equation}
+SNR= \frac{\mu}{\sigma},
+\end{equation}
 
+donde $\mu$ es la media y $\sigma$ es la desviación estándar de la entropía calculada.  
+
+La utilización de la señal a ruido como criterio para discernir entre ruido y dato significativo es utilizada ampliamente en el campo de procesamiento de señales.
+Aquí, la medida SNR nos permite de medir si un una medida de es representativa y cuantas veces es mayor con respecto el nivel de ruido.
+De este modo, podemos decir que a una determinada fecha, la entropía es mas significativa N veces el valor de ruido. e.g., el 8 de marzo se detecto un mínimo de  entropía con SNR  de 4 veces el nivel del ruido.
 
 
 

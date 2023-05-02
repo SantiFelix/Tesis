@@ -197,12 +197,11 @@ $\mu = \underset{all \hspace{0.15cm} \textbf{\textit{x}}}{\overset{}{\sum}} \tex
 \end{center}
 (Probability, Jim Pitman 1993, pg. 162, 163)
 \newpage
-Si bien el concepto anterior puede entenderse perfectamente para obtener la media de una distribución de valores discretos, también existe la definicion de mediana para valores continuos. A partir de la distribución $\textit{X}$, sea pues $\textit{f(x)}$ una función de densidad para una variable, el valor esperado $\textit{E(X)}$ a menudo denotado solo como $\mu$ o $ \mu_x$ es:
+Si bien el concepto anterior puede entenderse perfectamente para obtener la media de una distribución de valores discretos, también existe la definicion de mediana para valores continuos. A partir de la distribución $\textit{X}$, sea pues $\textit{f(x)}$ una función de densidad para una variable, el valor esperado $\textit{E(X)}$ a menudo denotado solo como $\mu$ o $ \mu_x$ es (Time Series Analysis, Cryer Jonathan, Chan Kung-Sik, 2008):
 
 \begin{center}
-$\textit{E(X)} =$ $\int_{-\infty}^{\infty} x f(x) dx $
+$\textit{E(X)} =$ $\int_{-\infty}^{\infty} x f(x) dx $.
 \end{center}
-(Time Series Analysis, Cryer Jonathan, Chan Kung-Sik, 2008)
 
 
 {
@@ -239,7 +238,7 @@ Sea \textit{X} una variable aleatoria. La varianza de \textit{X} denotada como $
 \begin{center}
 \hspace{3cm}$\mu = \mu_x = \textit{E(X)}$
 
-$E[(X - \mu)^2]$
+$E[(X - \mu)^2]$.
 \end{center}
 (Probability, Jim Pitman 1993, pg. 185)
 \newpage
@@ -254,10 +253,10 @@ Hasta ahora se ha tratado el concepto de distribución de manera intuitiva y  se
 La \textbf{distribución normal} es una curva normal que se representa por encima del eje x, el área bajo dicha curva normal se rige por los parámetros de la media $\mu$ y desviación estándar $\sigma$.
 
 \begin{center}
-$y = \frac{1}{\sqrt{2\pi}\sigma} e^{\frac{-z^2}{2}}$
+$y = \frac{1}{\sqrt{2\pi}\sigma} e^{\frac{-z^2}{2}}$,
 \end{center} 
 
-Donde $z = \frac{x - \mu}{\sigma}$ mide el número de desviaciones estándar desde la media $\mu$ hasta el número \textit{x}. Esta distribución posee media cero y desviación estándar uno.( Probability, Jim Pitman 1993, pg. 94)
+donde $z = \frac{x - \mu}{\sigma}$ mide el número de desviaciones estándar desde la media $\mu$ hasta el número \textit{x}. Esta distribución posee media cero y desviación estándar uno.( Probability, Jim Pitman 1993, pg. 94)
 
 
 {
@@ -291,11 +290,11 @@ Se manifiesta cuando las configuraciones de un sistema permanecen inalteradas en
   \subsection*{Proceso estocástico} 
 }
 
-Se define por familias de variables aleatorias  \textit{X}($\mathit{t}; \mathit{\omega})\} \mid \mathit{t} \in \mathbb{T}$, para un conjunto indicado $\mathbb{T}$ (Hassler, U. 2016) :
+Se define por familias de variables aleatorias  \textit{X}($\mathit{t}; \mathit{\omega})\} \mid \mathit{t} \in \mathbb{T}$, para un conjunto indicado $\mathbb{T}$ (Hassler, U. 2016):
 
 \begin{center}
 \hspace{1.7cm}\textit{X} : $\mathbb{T} \times \mathit{\Omega} \rightarrow \mathbb{R} $ 
-($\mathit{t}$ ; $\mathit{\omega}$) $\mapsto$ \textit{X}($\mathit{t}$; $\omega$)
+($\mathit{t}$ ; $\mathit{\omega}$) $\mapsto$ \textit{X}($\mathit{t}$; $\omega$).
 \end{center}
 
 
@@ -303,10 +302,10 @@ Cabe mencionar que $ \mathit{t} \in \mathbb{T}$ en el contexto de este trabajo d
 
 \begin{center}
 \hspace{1.77cm}\textit{X} : $ \mathit{\Omega} \rightarrow \mathbb{R} $ 
-$\mathit{\omega}$ $\mapsto$ \textit{X}($\mathit{t_{o}}$; $\omega$)
+$\mathit{\omega}$ $\mapsto$ \textit{X}($\mathit{t_{o}}$; $\omega$),
 \end{center}
 
-Es decir que se puede referir a un resultado $\mathit{\omega_{o}}$ en un conjunto, o una \guillemotleft trayectoria \guillemotright realizada por el proceso(Hassler, U. 2016). 
+es decir que se puede referir a un resultado $\mathit{\omega_{o}}$ en un conjunto, o una \guillemotleft trayectoria \guillemotright realizada por el proceso(Hassler, U. 2016). 
 
 
 Por su parte, un proceso estocástico \textbf{estacionario} $\mathit{x}$($\mathit{t}$) es aquel proceso estocástico cuya función de densidad de probabilidad (FDP) $P[\mathit{x}(\mathit{t})]$ es invariante bajo un cambio de tiempo (Mantegna R. \& Stanley H., 2004).
@@ -316,7 +315,7 @@ En síntesis, es también un objeto \textit{complejo}. Para caracterizarlo matem
 \begin{center}
 \textit{X}($\mathit{t_{i}}$) $\equiv$ (\textit{X}($\mathit{t_{
 1}}$; $\mathit{\omega}$), ..., \textit{X}($\mathit{t_{
-n}}$; $\mathit{\omega}$))' \hspace{0.5cm},\hspace{0.5cm} $\mathit{t_{1}} < \cdots < \mathit{t_{n}}$ 
+n}}$; $\mathit{\omega}$))' \hspace{0.5cm},\hspace{0.5cm} $\mathit{t_{1}} < \cdots < \mathit{t_{n}}$ .
 \end{center}
 \newpage
 {
@@ -330,12 +329,10 @@ Conjunto de variables medidas secuencialmente en el tiempo (Cowpertwait P. \& Me
 Las series de tiempo financieras conllevan una gran cantidad de información que no es redundante. La cantidad de información es tan grande que es difícil extraer un subconjunto de información económica asociada a algún aspecto (Mantegna R. \& Stanley H., 2004).
 
 Para entender o modelar mecanismos que puedan manifestar comportamientos estocásticos para predecir futuros valores con base en el historial que manifiesta, o con otras series de tiempo cuyos factores son relacionados (Chan \& D. Cryer, 2008).  
-
-
 En otras palabras, es una secuencia de observaciones a una cantidad o cantidades. (Ruppert D. \& Matteson D, 2015). 
 
 
-Al utilizar series de tiempo el objetivo es obtener lo que se conoce como  \guillemotleft \textit{ticks} \guillemotright \hspace{0.12cm} que en un sentido muy general representa a cualesquiera variables cotizadas de cualquier origen de cualquier instrumento financiero (Dacoragna M.M., Et Al, 2001), vale la pena mencionar que gracias al poder computacional es posible registrar cada evento (transacción o trato) minuto a minuto, de aquí que en el lenguaje coloquial se utiliza la expresión \guillemotleft tick a tick \guillemotright o el también conocido en inglés\textit{data-tick}  (Hutzler, Mimkes \& Richmond,2013). La secuencia temporal de estos \textit{ticks} es \textit{inhomogénea} en caso de que los intervalos varíen en tamaño, naturalmente si la serie de tiempo cuyos \textit{ticks} registrados son de manera que sus intervalos permancen constantes, se le conoce como \textit{homogénea}. 
+Al utilizar series de tiempo el objetivo es obtener lo que se conoce como  \guillemotleft\textit{ticks}~\guillemotright \hspace{0.12cm} que en un sentido muy general representa a cualesquiera variables cotizadas de cualquier origen de cualquier instrumento financiero (Dacoragna M.M., Et Al, 2001), vale la pena mencionar que gracias al poder computacional es posible registrar cada evento (transacción o trato) minuto a minuto, de aquí que en el lenguaje coloquial se utiliza la expresión \guillemotleft tick a tick \guillemotright o el también conocido en inglés\textit{data-tick}  (Hutzler, Mimkes \& Richmond,2013). La secuencia temporal de estos \textit{ticks} es \textit{inhomogénea} en caso de que los intervalos varíen en tamaño, naturalmente si la serie de tiempo cuyos \textit{ticks} registrados son de manera que sus intervalos permancen constantes, se le conoce como \textit{homogénea}. 
 
 
 
@@ -356,7 +353,7 @@ Los mercados que atañen a este trabajo de tesis son conformados por dos tipos d
 }
 
 
-Cambio en las series de tiempo que puede no ser periódico (Introductory Time Series with R, Cowpertwait, Paul S.P., Metcalfe, Andrew V, 2009, pg. 5)
+Cambio en las series de tiempo que puede no ser periódico (Introductory Time Series with R, Cowpertwait, Paul S.P., Metcalfe, Andrew V, 2009, pg. 5).
 
 {
  
@@ -369,7 +366,7 @@ Sirven para indicar tendencias o \textit{"trends"} en corto o mediano plazo depe
 Asumiendo una longitud de $n$ días para la ventana de tiempo, el periodo en cuestión se etiqueta como $t$ y el precio de cierre que registra cada uno de los días es $C_t$, la media móvil simple se define como sigue: 
 
 \begin{center}
-$MAV = \biggl( \frac{1}{n} \biggr)(C_{t} + C_{t-2} + \cdots C_{t-n+1})$
+$MAV = \biggl( \frac{1}{n} \biggr)(C_{t} + C_{t-2} + \cdots C_{t-n+1})$.
 \end{center}
 
 Aunque suelen utilizarse con los precios de cierre, pueden ser utilizados con los precios en lo que abre un mercado, los precios más altos o los más bajos. (Mohammadali Mehralizadeh, 2017 pg.55)
@@ -403,9 +400,9 @@ Debido a la realción que tiene la \textit{Econofísica} con la \textit{mecánic
 La \textit{ley de la distribución de la probabilidad de la energía} en la \textit{mecánica estadística}:
 
 \begin{center}
-$\mathit{P(\varepsilon)} = $ C $e^{-\varepsilon/\mathit{T}}$ 
+$\mathit{P(\varepsilon)} = $ C $e^{-\varepsilon/\mathit{T}}$ ,
 \end{center}
-Donde:
+donde:
 
 $\varepsilon$ es la energía
 
@@ -427,9 +424,9 @@ De acuerdo con Cottrel, Michelson y Wright (Cottrell, Michelson, Wright, Classic
 
 
 \begin{center}
-$\mathit{P(d)} = $ C $e^{-d/\mathit{T}}$ 
+$\mathit{P(d)} = $ C $e^{-d/\mathit{T}}$ ,
 \end{center}
-Donde:
+donde:
 
 $d$ es el dinero
 
@@ -483,10 +480,10 @@ Lo importante en este caso es que cuando ambos prisioneros actúan interesadamen
 
 Si bien, en \textit{Física} la frecuencia es medida en \textbf{Hz} debido a la ecuación:
 \begin{center}
-$f=\frac{1}{\textit{T}}$
+$f=\frac{1}{\textit{T}}$,
 \end{center}
 
-Donde: 
+donde: 
 
 $\textit{T}  $ es el periodo y se mide en segundos.
 
@@ -515,11 +512,11 @@ Asumiendo que existe una ventana de tiempo de interés  $t_{i}$ La siguiente ecu
 
 \begin{center}
 
-$\textit{v}(t_{i}) = \textit{v}(\Delta t, n, p; t_{i}) = \Bigl[ \frac{1}{n} \sum_{j = 1}^{n} |r (\Delta t ; t_{i-n+j}|^{\textit{p}} \Bigr]^\frac{1}{\textit{p}}$
+$\textit{v}(t_{i}) = \textit{v}(\Delta t, n, p; t_{i}) = \Bigl[ \frac{1}{n} \sum_{j = 1}^{n} |r (\Delta t ; t_{i-n+j}|^{\textit{p}} \Bigr]^\frac{1}{\textit{p}}$,
 
 \end{center}
 
-Donde $\textit{r}$ son los retornos que se definen en la sección \textbf{retornos}, $\textit{n}$ es el número de la cantidad de observables utilizada para calcular los retornos, y $\textit{p}$ suele tomar el valor de 2 ya que $\textit{v}^{2}$ es la varianza de los retornos.  (An introduction to high-frequency finance, Dacoragna, Gencay, Muller, Olsen, Pictet 2001)
+donde $\textit{r}$ son los retornos que se definen en la sección \textbf{retornos}, $\textit{n}$ es el número de la cantidad de observables utilizada para calcular los retornos, y $\textit{p}$ suele tomar el valor de 2 ya que $\textit{v}^{2}$ es la varianza de los retornos.  (An introduction to high-frequency finance, Dacoragna, Gencay, Muller, Olsen, Pictet 2001)
 
 Antes de definir el siguiente concepto vale la pena mencionar que en este contexto la palabra \textit{eficiencia} se refiere a que la información se interpreta con rapidez, y no se refiere a los recursos que generen una producción máxima \citep[][]{samuelson2009economics}.
 
@@ -573,7 +570,7 @@ Para Peseran el núcleo de la hipótesis del mercado eficiente se compone de las
  \subsection*{Relación señal a ruido}
  
  \begin{equation}
- 	$SNR= \frac{\mu}{\sigma}$
+ 	SNR= \frac{\mu}{\sigma},
  \end{equation}
 
 $\mu$ es la media y $\sigma$ es la desviación estándar, ambas del conjunto de datos en cuestión.  

@@ -60,8 +60,8 @@ entropy=calc_entropy(window_entropy,ret1,nq);
 %% Calculate MAV moving mean and entropy
 
 window=1;   %sliding window size for moving average
-window_entropy=20;   %window to calculate entropy shanon
-nq = 23; %default for havin quartile, change to have n+1 quantile
+window_entropy=50;   %window to calculate entropy shanon
+nq = 4; %default for havin quartile, change to have n+1 quantile
 
 [entropyMAV] = calc_entropyMAV(precios, window, window_entropy, nq);
 
@@ -121,7 +121,7 @@ hypermatrix=[];
 hypermatrix_snr=[];
 k = 1;
 SNR_level=5;
-for window_entropy = 60:10:150
+for window_entropy = 10:10:150
     j = 1;
     for nq = 3:10:150
         i=1;
@@ -133,29 +133,29 @@ for window_entropy = 60:10:150
             t = 1:numel(dmahal); 
             hypermatrix(i, j, k)=n_minE;
             hypermatrix_snr(i, j, k)=max_snr;
-figure
-plot(dmahal)
-hold on
-plot(t(min_entropyMAV_l), dmahal(min_entropyMAV_l),'x')
-ylabel('SNR'); xlabel('value');
-title(['SNR with window ', num2str(window), '  NQ ',num2str(nq), '  entropyW ',num2str(window_entropy)]);
-filename=[figdir,'SNR_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.pdf'];
-saveas(gca,filename,'pdf');
-filename=[figdir,'SNR_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.jpg'];
-saveas(gca,filename,'jpg');
-
-figure
-hold on
-plot(entropyMAV)
-plot(t(min_entropyMAV_l), entropyMAV(min_entropyMAV_l),'x')
-[n_minE]=check_intervals(min_entropyMAV);
-ylabel('Entropy'); xlabel('value');
-title(['Entropy with window ', num2str(window), '  NQ ',num2str(nq), '  entropyW ',num2str(window_entropy)]);
-filename=[figdir,'Entropy_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.pdf'];
-saveas(gca,filename,'pdf');
-filename=[figdir,'Entropy_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.jpg'];
-saveas(gca,filename,'jpg');
-close all
+% figure
+% plot(dmahal)
+% hold on
+% plot(t(min_entropyMAV_l), dmahal(min_entropyMAV_l),'x')
+% ylabel('SNR'); xlabel('value');
+% title(['SNR with window ', num2str(window), '  NQ ',num2str(nq), '  entropyW ',num2str(window_entropy)]);
+% filename=[figdir,'SNR_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.pdf'];
+% saveas(gca,filename,'pdf');
+% filename=[figdir,'SNR_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.jpg'];
+% saveas(gca,filename,'jpg');
+% 
+% figure
+% hold on
+% plot(entropyMAV)
+% plot(t(min_entropyMAV_l), entropyMAV(min_entropyMAV_l),'x')
+% [n_minE]=check_intervals(min_entropyMAV);
+% ylabel('Entropy'); xlabel('value');
+% title(['Entropy with window ', num2str(window), '  NQ ',num2str(nq), '  entropyW ',num2str(window_entropy)]);
+% filename=[figdir,'Entropy_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.pdf'];
+% saveas(gca,filename,'pdf');
+% filename=[figdir,'Entropy_window_', num2str(window), '_NQ_',num2str(nq), '_entropyW_',num2str(window_entropy),'.jpg'];
+% saveas(gca,filename,'jpg');
+% close all
             
             i=i+1;
         end
@@ -173,7 +173,7 @@ window=[1, 10, 50, 100];
 % (window, nq, window_entropy)
 for i = 1:4
 subplot(1,4,i)
-imagesc(window_entropy,nq,reshape(hypermatrix_snr(i,:,:),[15 15]))
+imagesc(window_entropy,nq,reshape(hypermatrix_snr(i,:,:),[15 10]))
 ylabel('nq'); xlabel('W entropy ');
 title(['W return', string(window(i))]);
 
